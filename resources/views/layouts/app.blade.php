@@ -8,12 +8,11 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div>
-        @include('layouts.partial.header')
-    </div>
+
+    @dump($velflix)
 
     <div>
-        {{-- @include('layouts.partial.section') --}}
+        @include('layouts.partial.header')
     </div>
 </body>
 </html>
