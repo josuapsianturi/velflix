@@ -8,7 +8,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div class="text-center">Velflix</div>
+    <x-header />
 
 </body>
 </html>
