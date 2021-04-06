@@ -8,7 +8,12 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <x-header />
+    <div>
+        @include('layouts.partial.header')
+    </div>
 
+    <div>
+        {{-- @include('layouts.partial.section') --}}
+    </div>
 </body>
 </html>
