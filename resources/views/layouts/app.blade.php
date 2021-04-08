@@ -18,5 +18,9 @@
     <div>
         @include('layouts.partial.nav')
     </div>
+
+    <div class="bg-black">
+        @include('layouts.partial.footer')
+    </div>
 </body>
 </html>
