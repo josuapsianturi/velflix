@@ -12,11 +12,11 @@
     {{-- @dump($velflix) --}}
 
     <div>
-        @include('layouts.partial.header')
+        @include('layouts.partials.header')
     </div>
 
     <div>
-        @include('layouts.partial.nav')
+        @include('layouts.partials.nav')
     </div>
     <div x-data="{ open: false }">
         <button @click="open = true">Open Dropdown</button>
@@ -29,7 +29,7 @@
         </ul>
     </div>
     <div class="bg-black">
-        @include('layouts.partial.footer')
+        @include('layouts.partials.footer')
     </div>
 </body>
 </html>
