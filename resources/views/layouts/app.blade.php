@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Velflix</title>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <script src="{{ mix('js/app.js') }}"></script>
 </head>
 <body>
-
     {{-- @dump($velflix) --}}
 
     <div>
@@ -18,7 +18,16 @@
     <div>
         @include('layouts.partial.nav')
     </div>
+    <div x-data="{ open: false }">
+        <button @click="open = true">Open Dropdown</button>
 
+        <ul
+            x-show="open"
+            @click.away="open = false"
+        >
+            Dropdown Body
+        </ul>
+    </div>
     <div class="bg-black">
         @include('layouts.partial.footer')
     </div>
