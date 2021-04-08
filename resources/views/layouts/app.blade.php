@@ -9,10 +9,14 @@
 </head>
 <body>
 
-    @dump($velflix)
+    {{-- @dump($velflix) --}}
 
     <div>
         @include('layouts.partial.header')
+    </div>
+
+    <div>
+        @include('layouts.partial.nav')
     </div>
 </body>
 </html>
