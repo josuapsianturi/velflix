@@ -8,28 +8,16 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <script src="{{ mix('js/app.js') }}"></script>
 </head>
-<body>
+<body class="bg-black">
     {{-- @dump($velflix) --}}
 
-    <div>
         @include('layouts.partials.header')
-    </div>
 
-    <div>
         @include('layouts.partials.nav')
-    </div>
-    <div x-data="{ open: false }">
-        <button @click="open = true">Open Dropdown</button>
 
-        <ul
-            x-show="open"
-            @click.away="open = false"
-        >
-            Dropdown Body
-        </ul>
-    </div>
-    <div class="bg-black">
+        @include('movies.index')
+
         @include('layouts.partials.footer')
-    </div>
+
 </body>
 </html>
