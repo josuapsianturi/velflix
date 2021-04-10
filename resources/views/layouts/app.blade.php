@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Velflix</title>
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="{{ mix('js/app.js') }}"></script>
 </head>
 <body class="bg-black">
@@ -19,5 +21,6 @@
 
         @include('layouts.partials.footer')
 
-</body>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script></body>
 </html>
