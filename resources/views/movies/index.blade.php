@@ -7,11 +7,9 @@
         </h2>
 
         <div class="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
-            @foreach ($velflix as $movies)
-            <img class="w-screen h-full cursor-pointer"
-            src="{{ 'https://image.tmdb.org/t/p/w500/' . $movies['poster_path'] }}"
-            alt="poster">
-            @endforeach
-        </div>
+        @foreach($velflix as $movie )
+            <x-velflix-card :movie="$movie" />
+        @endforeach
+    </div>
     </div>
 </div>
