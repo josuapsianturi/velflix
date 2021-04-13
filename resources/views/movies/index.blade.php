@@ -2,14 +2,14 @@
 
 <div class="container px-4 pt-16 mx-auto">
     <div class="popular-movies">
-        <h2 class="text-lg font-bold tracking-wider text-gray-200">
+        <h2 class="text-lg antialiased font-bold tracking-wide text-gray-200">
             Popular on Velflix
         </h2>
 
         <div>
             <div x-data="{swiper: null}" x-init="swiper = new Swiper($refs.container, {
                 loop: true,
-                slidesPerView: 1,
+                slidesPerView: 2,
                 spaceBetween: 0,
 
                 breakpoints: {
@@ -28,7 +28,7 @@
                 },
             })" class="relative flex flex-row w-full mx-auto">
 
-                <button class="absolute inset-y-0 left-0 z-10 text-center origin-center bg-black bg-opacity-50 w-14" @click="swiper.slideNext()">
+                <button class="absolute inset-y-0 left-0 z-10 text-center origin-center bg-black bg-opacity-50 w-14" @click="swiper.slidePrev()">
                     <x-bi-chevron-compact-left class="ml-5 text-white" />
                 </button>
 
