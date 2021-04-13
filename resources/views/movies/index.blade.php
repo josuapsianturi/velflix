@@ -1,4 +1,5 @@
-{{-- @dump($velflix[0]['title']) --}}
+{{-- @dump($velflix) --}}
+{{-- @dump($genres) --}}
 
 <div class="container px-4 pt-16 mx-auto">
     <div class="popular-movies">
@@ -35,7 +36,7 @@
                 <div class="swiper-container" x-ref="container">
                     <div class="text-white swiper-wrapper">
                         @foreach($velflix as $movie )
-                            <x-velflix-card :movie="$movie"  />
+                            <x-velflix-card :movie="$movie" :genres="$genres" />
                         @endforeach
                     </div>
                 </div>

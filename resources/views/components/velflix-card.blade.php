@@ -1,4 +1,5 @@
 {{-- @dump($movie) --}}
+{{-- @dump($genres) --}}
 
 <div class="p-1 swiper-slide">
     <div class="flex flex-col overflow-hidden bg-black rounded shadow">
@@ -28,6 +29,17 @@
 
         <div class="flex mx-4">
             <span class="font-bold text-green-500">{{ $movie['vote_average'] * 10 . '%' }} Match</span>
+        </div>
+
+        <div class="flex m-4">
+            <span class="flex text-sm font-medium text-gray-400 truncate">
+            @foreach ($movie['genre_ids'] as $genre)
+                {{ $genres->get($genre) }}
+                <div class="flex items-center ">
+                    <x-bi-dot />
+                </div>
+            @endforeach
+            </span>
         </div>
     </div>
 </div>

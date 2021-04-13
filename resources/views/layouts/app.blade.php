@@ -12,6 +12,7 @@
 </head>
 <body class="bg-black">
     {{-- @dump($velflix) --}}
+    {{-- @dump($genres) --}}
 
         @include('layouts.partials.header')
 
