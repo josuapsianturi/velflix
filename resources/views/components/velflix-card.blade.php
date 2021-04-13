@@ -26,5 +26,8 @@
             </button>
         </div>
 
+        <div class="flex mx-4">
+            <span class="font-bold text-green-500">{{ $movie['vote_average'] * 10 . '%' }} Match</span>
+        </div>
     </div>
 </div>
