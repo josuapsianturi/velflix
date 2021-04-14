@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [VelflixController::class, 'index'])->name('velflix.index');
+Route::get('/movie/{watch}', [VelflixController::class, 'show'])->name('movies.show');
