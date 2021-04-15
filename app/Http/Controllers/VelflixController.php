@@ -68,7 +68,7 @@ class VelflixController extends Controller
             ->json();
         // dd($movie);
 
-        return view('movies.watch', [
+        return view('movies.show', [
             'movies' => $playMovie,
         ]);
     }

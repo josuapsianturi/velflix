@@ -13,7 +13,7 @@
 
         <div class="flex m-4">
             <a href="{{ route('movies.show', $movie['id']) }}">
-                <button class="flex items-center justify-center w-8 h-8 mr-2 bg-white border rounded-full">
+                <button class="flex items-center justify-center w-8 h-8 mr-2 bg-white border rounded-full focus:outline-none">
                     <x-bi-caret-right-fill class="w-5 h-5 text-black" />
                 </button>
             </a>
@@ -26,9 +26,11 @@
             <button class="flex items-center justify-center w-8 h-8 mr-8 rounded-full ring-2 ring-gray-400">
                 <x-bi-hand-thumbs-down class="w-4 h-4 text-white" />
             </button>
-            <button class="flex items-center justify-center w-8 h-8 rounded-full ring-2 ring-gray-400">
-                <x-bi-chevron-down class="w-4 h-4 text-white" />
-            </button>
+            <a href="{{ route('movies.show', $movie['id']) }}">
+                <button class="flex items-center justify-center w-8 h-8 rounded-full ring-2 ring-gray-400 focus:outline-none ">
+                    <x-bi-chevron-down class="w-4 h-4 text-white" />
+                </button>
+            </a>
         </div>
 
         <div class="flex mx-4">
