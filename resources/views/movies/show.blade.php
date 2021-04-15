@@ -39,6 +39,12 @@
                             <x-bi-hand-thumbs-down class="w-4 h-4 text-white" />
                         </button>
                     </div>
+
+                    <div class="flex my-3 space-x-4">
+                        <span class="font-bold text-green-500">{{ $movies['vote_average'] * 10 . '%' }} Match</span>
+                        <span>{{ date('Y', strtotime($movies['release_date'] )) }}</span>
+                    </div>
+
                     <div class="">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Labore omnis qui doloribus cupiditate tenetur accusamus earum placeat minus error sint enim,
