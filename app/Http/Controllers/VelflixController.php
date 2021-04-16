@@ -66,7 +66,6 @@ class VelflixController extends Controller
         $playMovie = Http::withToken(config('services.tmdb.token'))
             ->get('https://api.themoviedb.org/3/movie/' . $id . '?append_to_response=credits,videos,images')
             ->json();
-        // dd($movie);
 
         return view('movies.show', [
             'movies' => $playMovie,
