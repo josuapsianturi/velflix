@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="{{ mix('js/app.js') }}"></script>
+    @livewireStyles
 </head>
 <body class="bg-black">
     {{-- @dump($velflix) --}}
@@ -22,6 +23,7 @@
 
         @include('layouts.partials.footer')
 
+    @livewireScripts
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script></body>
 </html>

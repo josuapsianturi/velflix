@@ -13,6 +13,7 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
+        "livewire/livewire": "^2.4",
         "owenvoke/blade-entypo": "^1.4",
         "owenvoke/blade-fontawesome": "^1.8"
     },
