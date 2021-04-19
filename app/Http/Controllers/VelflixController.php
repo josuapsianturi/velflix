@@ -18,6 +18,10 @@ class VelflixController extends Controller
         ->get('https://api.themoviedb.org/3/movie/popular')
         ->json()['results'];
 
+        $trending = Http::withToken(config('services.tmdb.token'))
+        ->get('https://api.themoviedb.org/3/trending/movie/day')
+        ->json()['results'];
+
         $velflixgenres = Http::withToken(config('services.tmdb.token'))
         ->get('https://api.themoviedb.org/3/genre/movie/list')
         ->json()['genres'];
@@ -31,6 +35,7 @@ class VelflixController extends Controller
         return view('layouts.app', [
             'velflix' => $popular,
             'genres' => $genres,
+            'trending' => $trending,
         ]);
     }
 
