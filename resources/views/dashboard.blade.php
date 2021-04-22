@@ -30,6 +30,7 @@
             <h1 class="w-full px-12 text-4xl font-bold text-center lg:px-0 lg:text-6xl md:w-1/2">Unlimited movies,
                 TV shows and more.</h1>
             <p class="px-12 mt-6 text-xl text-center md:text-2xl">Watch anywhere. Cancel anytime.</p>
+            @include('layouts.partials.register')
         </div>
 </nav>
 </body>
