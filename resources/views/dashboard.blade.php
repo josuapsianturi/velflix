@@ -33,5 +33,21 @@
             @include('layouts.partials.register')
         </div>
 </nav>
+
+<div class="w-full h-3 bg-gray-800"></div>
+<section>
+    <div class="flex justify-center p-12 full">
+        <div class="flex flex-col items-center justify-center w-3/5">
+            <div>
+                <div class="text-4xl">Enjoy on your TV.</div>
+                <div class="text-2xl">
+                    watch on Smart TV, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.
+                </div>
+            </div>
+        </div>
+        <img width="600" src="{{ asset('img/img1.png') }}" />
+</section>
+
+
 </body>
 </html>
