@@ -7,7 +7,7 @@
     <title>Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="{{ mix('js/app.js') }}"></script>
 </head>
 <body class="text-white bg-black">
 
@@ -20,7 +20,7 @@
 
         <div class="z-30 flex flex-row justify-between px-12 py-4">
             <div class="text-2xl font-bold text-red-600 uppercase">
-               Netflix
+               Velflix
             </div>
             <div class="px-4 py-1 text-white bg-red-600 rounded cursor-pointer">
                 Sign In
@@ -75,7 +75,60 @@
 </section>
 
 
+<div class="w-full h-3 bg-gray-800"></div>
+<article>
+    <div class="container px-4 mx-auto mt-12 text-center xl:px-64">
+        <h2 class="text-5xl font-bold">Frequently Asked Questions</h2>
+        <div class="my-16 text-2xl leading-loose " x-data="{
+                faqs: [
+                    {
+                        question: 'What is Velflix?',
+                        answer: 'Velflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices. You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price ',
+                        isOpen: false,
+                    },
+                    {
+                        question: 'How much does Velflix cost?',
+                        answer: 'Watch Velflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from IDR54,000 to IDR186,000 a month. No extra costs, no contracts.',
+                        isOpen: false,
+                    },
+                    {
+                        question: 'Where can I watch?',
+                        answer: 'Watch anywhere, anytime, on an unlimited number of devices. Sign in with your Velflix account to watch instantly on the web at Velflix.com from your personal computer or on any internet-connected device that offers the Velflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.',
+                        isOpen: false,
+                    },
+                    {
+                        question: 'How do I cancel?',
+                        answer: 'Velflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.',
+                        isOpen: false,
+                    },
+                    {
+                        question: 'What can I watch on Velflix?',
+                        answer: 'Velflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Velflix originals, and more. Watch as much as you want, anytime you want.',
+                        isOpen: false,
+                    },
+                ]
+            }">
+            <template x-for="faq in faqs" :key="faq">
+                <div class="px-4 text-left bg-gray-800">
+                    <button @click="faq.isOpen = !faq.isOpen"
+                        class="flex justify-between w-full p-4 px-4 mt-4 font-bold border-b border-black">
+                        <div x-text="faq.question"></div>
+                        <x-bi-plus x-show="!faq.isOpen" class="w-12 h-12" />
+                        <x-bi-x x-show="faq.isOpen" class="w-12 h-12" />
+                    </button>
 
+                    <div class="px-4 mt-2 text-white origin-top transform" x-show="faq.isOpen"
+                        x-transition:enter="transition-all ease-out duration-150"
+                        x-transition:enter-start="opacity-0 scale-75" x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition-all ease-in duration-150"
+                        x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-75"
+                        x-text="faq.answer">
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+</article>
 
 </body>
 </html>
