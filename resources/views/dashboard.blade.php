@@ -61,6 +61,20 @@
         </div>
 </section>
 
+<div class="w-full h-3 bg-gray-800"></div>
+<section>
+    <div class="flex justify-center p-12 full">
+        <div class="flex flex-col items-center justify-center w-3/5">
+            <div>
+                <div class="text-4xl">Watch everywhere.</div>
+                <div class="text-2xl">
+                    Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV. </div>
+            </div>
+        </div>
+        <img width="600" src="{{ asset('img/img3.png') }}" />
+</section>
+
+
 
 
 </body>
