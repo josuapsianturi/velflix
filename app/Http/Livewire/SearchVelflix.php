@@ -22,7 +22,7 @@ class SearchVelflix extends Component
         // dump($searchVelflixResults);
 
         return view('livewire.search-velflix', [
-            'searchVelflixResults' => $searchVelflixResults,
+            'searchVelflixResults' => collect($searchVelflixResults)->take(7),
         ]);
     }
 }
