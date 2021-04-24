@@ -79,7 +79,7 @@
 <article>
     <div class="container px-4 mx-auto mt-12 text-center xl:px-64">
         <h2 class="text-5xl font-bold">Frequently Asked Questions</h2>
-        <div class="my-16 text-2xl leading-loose " x-data="{
+        <div class="my-10 text-2xl leading-loose " x-data="{
                 faqs: [
                     {
                         question: 'What is Velflix?',
@@ -130,5 +130,12 @@
     </div>
 </article>
 
+
+<section class="z-30 flex flex-col items-center justify-center py-40 text-white lg:py-32">
+    @include('layouts.partials.register')
+</section>
+
+<div class="w-full h-3 bg-gray-800"></div>
+    @include('layouts.partials.footer')
 </body>
 </html>
