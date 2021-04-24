@@ -14,10 +14,7 @@
         </ul>
 
         <nav class="flex-wrap items-center justify-center hidden space-x-6 text-base font-bold md:ml-auto lg:flex">
-            <div class="relative p-1 text-white bg-black border border-white ">
-                <x-bi-search class="absolute w-5 h-5 m-1" />
-                <input type="text" placeholder="Titles, people, genres" class="ml-8 text-white placeholder-gray-500 bg-black focus:outline-none ">
-            </div>
+            <livewire:search-velflix />
             <x-bi-gift class="w-5 h-5" />
             <x-bi-bell-fill class="w-5 h-5" />
 
