@@ -15,13 +15,18 @@
     {{-- @dump($velflix) --}}
     {{-- @dump($genres) --}}
 
-        @include('layouts.partials.header')
+        {{-- @include('layouts.partials.header') --}}
 
-        @include('layouts.partials.nav')
+        {{-- <div x-data="{ hover: false }">
+            <span x-on:mouseover="hover = true" x-on:mouseout="hover = false" class="text-white">Hover Here</span>
+            <span x-show="hover" class="text-white">Shows on Hover</span>
+        </div> --}}
+
+        {{-- @include('layouts.partials.nav') --}}
 
         @include('movies.index')
 
-        @include('layouts.partials.footer')
+        {{-- @include('layouts.partials.footer') --}}
 
     @livewireScripts
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
