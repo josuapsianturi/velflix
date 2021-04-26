@@ -32,6 +32,12 @@ class VelflixController extends Controller
         ->json()['results'];
         // dd($comedies);
 
+
+        $western = Http::withToken(config('services.tmdb.token'))
+        ->get('https://api.themoviedb.org/3/discover/movie?api_key=MY_API_KEY&with_genres=37')
+        ->json()['results'];
+        // dd($western);
+
         $genres = collect($velflixgenres)->mapWithKeys(function ($genre) {
             return [ $genre['id'] => $genre['name'] ];
         });
@@ -42,6 +48,7 @@ class VelflixController extends Controller
             'genres' => $genres,
             'trending' => $trending,
             'comedies' => $comedies,
+            'western' => $western,
         ]);
     }
 
