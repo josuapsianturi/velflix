@@ -23,7 +23,9 @@
                Velflix
             </div>
             <div class="px-4 py-1 text-white bg-red-600 rounded cursor-pointer">
-                Sign In
+                <a href="{{ route('velflix.index') }}" clas="px-4 py-1 text-white bg-red-600 rounded cursor-pointer">
+                    Browse
+                </a>
             </div>
         </div>
         <div class="z-30 flex flex-col items-center justify-center py-48 text-white lg:py-32">

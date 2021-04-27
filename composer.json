@@ -18,7 +18,6 @@
         "owenvoke/blade-fontawesome": "^1.8"
     },
     "require-dev": {
-        "davidhsianturi/laravel-compass": "^1.2",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",
