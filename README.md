@@ -1,4 +1,6 @@
 <h1 align="center" >Velflix</h1>
+<p align="center"><a href="https://packagist.org/packages/cpriego/valet-linux"><img src="https://poser.pugx.org/cpriego/valet-linux/license.svg" alt="License"></a>
+</p>
 
 ## About Velflix
 
@@ -9,13 +11,35 @@ Velflix is a Laravel [Netflix](https://netflix.com) clone project, that i build 
 ![screenshot](https://raw.githubusercontent.com/josuapsianturi/velflix/main/public/img/screenshot2.png)
 
 ## Installation
+Here is how you can run the project locally:
+1. Clone this repo
+    ```sh
+    git clone https://github.com/josuapsianturi/velflix.git
+    ```
+1. Go into the project root directory
+    ```sh
+    cd velflix
+    ```
+1. Install PHP dependencies 
+    ```sh
+    composer install
+    ```
+1. Create account and get an API key themoviedb [ here](https://www.themoviedb.org/settings/api). Make sure to copy `API Read Access Token (v4 auth)`.
+1. Go to `.env` file and paste `TMDB_TOKEN=(your API key)`
+1. Generate key 
+    ```sh
+    php artisan key:generate
+    ```
+1. Run server 
+    ```sh
+    php artisan serve
+    ```  
+1. Visit `localhost:8000` in your favorite browser.     
 
-1. Clone the repo and `cd` into it
-1. type `composer install` in your terminal.
-1. add your `TMDB_TOKEN` in your `.env` file. create account and get an [API key themoviedb here](https://www.themoviedb.org/settings/api).
-   Make sure to use the "API Read Access Token (v4 auth)" from the TMDB dashbord.
-1. generate key `php artisan key:generate`
-1. run server `php artisan serve` or use Laravel Valet, Homestead, etc.
-1. visit `localhost:8000` in your favorite browser.
+- Make sure to follow your Laravel local Development Environment.
 
+## Contributing
+Pull requests are welcome.
 
+## License
+Velflix is open-sourced software licensed under [the MIT license](https://choosealicense.com/licenses/mit/)
