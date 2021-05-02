@@ -6,6 +6,8 @@
 
 Velflix is a Laravel [Netflix](https://netflix.com) clone project, that i build using TALL stack ([Tailwindcss](https://tailwindcss.com/), [Alpinejs](https://github.com/alpinejs/alpine/), [Laravel](https://laravel.com/), [Livewire](https://laravel-livewire.com/) ).
 
+> Note: Work in Progress.
+
 ## View
 ![screenshot](https://raw.githubusercontent.com/josuapsianturi/velflix/main/public/img/screenshot1.png)
 ![screenshot](https://raw.githubusercontent.com/josuapsianturi/velflix/main/public/img/screenshot2.png)
@@ -36,7 +38,7 @@ Here is how you can run the project locally:
     ```  
 1. Visit `localhost:8000` in your favorite browser.     
 
-- Make sure to follow your Laravel local Development Environment.
+    > Make sure to follow your Laravel local Development Environment.
 
 ## Contributing
 Pull requests are welcome.
