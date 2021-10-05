@@ -33,6 +33,8 @@ Here is how you can run the project locally:
     php artisan key:generate
     ```
 1. Run server 
+    > for valet users visit `velflix.test` in your favorite browser
+   
     ```sh
     php artisan serve
     ```  
