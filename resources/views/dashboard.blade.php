@@ -7,7 +7,12 @@
     <title>Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <script src="{{ mix('js/app.js') }}"></script>
+    <!-- Alpine Plugins -->
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <!-- Alpine CDN -->
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+    {{-- <script src="{{ mix('js/app.js') }}"></script> --}}
 </head>
 <body class="text-white bg-black">
 
@@ -36,7 +41,7 @@
         </div>
 </nav>
 
-<div class="w-full h-3 bg-gray-800"></div>
+<div class="w-full h-3" style="background-color: #222"></div>
 <section>
     <div class="flex justify-center p-12 full">
         <div class="flex flex-col items-center justify-center w-3/5">
@@ -50,7 +55,7 @@
         <img width="600" src="{{ asset('img/img1.png') }}" />
 </section>
 
-<div class="w-full h-3 bg-gray-800"></div>
+<div class="w-full h-3" style="background-color: #222"></div>
 <section>
     <div class="flex justify-center p-12 full">
         <img width="600" src="{{ asset('img/img2.png') }}" />
@@ -63,7 +68,7 @@
         </div>
 </section>
 
-<div class="w-full h-3 bg-gray-800"></div>
+<div class="w-full h-3" style="background-color: #222"></div>
 <section>
     <div class="flex justify-center p-12 full">
         <div class="flex flex-col items-center justify-center w-3/5">
@@ -77,60 +82,51 @@
 </section>
 
 
-<div class="w-full h-3 bg-gray-800"></div>
-<article>
+<div class="w-full h-3" style="background-color: #222"></div>
+
+<!-- FAQ -->
+<section>
     <div class="container px-4 mx-auto mt-12 text-center xl:px-64">
         <h2 class="text-5xl font-bold">Frequently Asked Questions</h2>
-        <div class="my-10 text-2xl leading-loose " x-data="{
-                faqs: [
-                    {
-                        question: 'What is Velflix?',
-                        answer: 'Velflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices. You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price ',
-                        isOpen: false,
+        <div x-data="{ active: 1, items: [
+            { id: 1, title: 'What is Velflix?', answer: 'Velflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices. You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price' },
+            { id: 2, title: 'How much does Velflix cost?', answer: 'Watch Velflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from IDR54,000 to IDR186,000 a month. No extra costs, no contracts.'},
+            { id: 3, title: 'Where can I watch?', answer: 'Watch anywhere, anytime, on an unlimited number of devices. Sign in with your Velflix account to watch instantly on the web at Velflix.com from your personal computer or on any internet-connected device that offers the Velflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.'},
+            { id: 4, title: 'How do I cancel?', answer: 'Velflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.'},
+            { id: 5, title: 'What can I watch on Velflix?', answer: 'Velflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Velflix originals, and more. Watch as much as you want, anytime you want.'},
+            { id: 6, title: 'Is Velflix good for kids?', answer: 'The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space. Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.'},
+            ]}"class="space-y-4 "
+        >
+            <template x-for="{ id, title, answer } in items " :key="id" >
+                <div x-data="{
+                    get expanded() {
+                        return this.active === this.id
                     },
-                    {
-                        question: 'How much does Velflix cost?',
-                        answer: 'Watch Velflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from IDR54,000 to IDR186,000 a month. No extra costs, no contracts.',
-                        isOpen: false,
+                    set expanded(value) {
+                        this.active = value ? this.id : null
                     },
-                    {
-                        question: 'Where can I watch?',
-                        answer: 'Watch anywhere, anytime, on an unlimited number of devices. Sign in with your Velflix account to watch instantly on the web at Velflix.com from your personal computer or on any internet-connected device that offers the Velflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.',
-                        isOpen: false,
-                    },
-                    {
-                        question: 'How do I cancel?',
-                        answer: 'Velflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.',
-                        isOpen: false,
-                    },
-                    {
-                        question: 'What can I watch on Velflix?',
-                        answer: 'Velflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Velflix originals, and more. Watch as much as you want, anytime you want.',
-                        isOpen: false,
-                    },
-                ]
-            }">
-            <template x-for="faq in faqs" :key="faq">
-                <div class="px-4 text-left bg-gray-800">
-                    <button @click="faq.isOpen = !faq.isOpen"
-                        class="flex justify-between w-full p-4 px-4 mt-4 font-bold border-b border-black">
-                        <div x-text="faq.question"></div>
-                        <x-bi-plus x-show="!faq.isOpen" class="w-12 h-12" />
-                        <x-bi-x x-show="faq.isOpen" class="w-12 h-12" />
-                    </button>
+                }" role="region" class="text-white border border-black" style="background-color: #303030">
+                    <h2>
+                        <button
+                            @click="expanded = !expanded"
+                            :aria-expanded="expanded"
+                            class="flex items-center justify-between w-full px-6 py-3 text-xl font-bold tracking-wider"
+                            >
+                            <span x-text="title"></span>
+                            <span x-show="expanded" aria-hidden="true" class="ml-4">&minus;</span>
+                            <span x-show="!expanded" aria-hidden="true" class="ml-4">&plus;</span>
+                        </button>
+                    </h2>
 
-                    <div class="px-4 mt-2 text-white origin-top transform" x-show="faq.isOpen"
-                        x-transition:enter="transition-all ease-out duration-150"
-                        x-transition:enter-start="opacity-0 scale-75" x-transition:enter-end="opacity-100 scale-100"
-                        x-transition:leave="transition-all ease-in duration-150"
-                        x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-75"
-                        x-text="faq.answer">
+                    <div x-show="expanded" x-collapse.duration.500ms>
+                        <div x-text="answer" class="px-6 pb-4"></div>
                     </div>
                 </div>
             </template>
         </div>
     </div>
-</article>
+</section>
+<!-- End FAQ -->
 
 
 <section class="z-30 flex flex-col items-center justify-center py-40 text-white lg:py-32">
