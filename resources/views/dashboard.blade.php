@@ -42,6 +42,7 @@
 </nav>
 
 <div class="w-full h-3" style="background-color: #222"></div>
+
 <section>
     <div class="flex justify-center p-12 full">
         <div class="flex flex-col items-center justify-center w-3/5">
@@ -56,6 +57,7 @@
 </section>
 
 <div class="w-full h-3" style="background-color: #222"></div>
+
 <section>
     <div class="flex justify-center p-12 full">
         <img width="600" src="{{ asset('img/img2.png') }}" />
@@ -69,6 +71,7 @@
 </section>
 
 <div class="w-full h-3" style="background-color: #222"></div>
+
 <section>
     <div class="flex justify-center p-12 full">
         <div class="flex flex-col items-center justify-center w-3/5">
@@ -80,7 +83,6 @@
         </div>
         <img width="600" src="{{ asset('img/img3.png') }}" />
 </section>
-
 
 <div class="w-full h-3" style="background-color: #222"></div>
 
@@ -128,12 +130,13 @@
 </section>
 <!-- End FAQ -->
 
-
 <section class="z-30 flex flex-col items-center justify-center py-40 text-white lg:py-32">
     @include('layouts.partials.register')
 </section>
 
-<div class="w-full h-3 bg-gray-800"></div>
+<div class="w-full h-3" style="background-color: #222"></div>
+
     @include('layouts.partials.footer')
+
 </body>
 </html>

@@ -7,16 +7,12 @@ use Illuminate\Support\Facades\Http;
 
 class VelflixController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $popular = Http::withToken(config('services.tmdb.token'))
         ->get('https://api.themoviedb.org/3/movie/popular')
         ->json()['results'];
+        // dd($popular);
 
         $trending = Http::withToken(config('services.tmdb.token'))
         ->get('https://api.themoviedb.org/3/trending/movie/day')
@@ -57,15 +53,13 @@ class VelflixController extends Controller
         ->json()['results'];
         // dd($animation);
 
-
         $genres = collect($velflixgenres)->mapWithKeys(function ($genre) {
             return [ $genre['id'] => $genre['name'] ];
         });
         // dd($genres);
 
-
         return view('layouts.app', [
-            'velflix' => $popular,
+            'popular' => $popular,
             'genres' => $genres,
             'trending' => $trending,
             'comedies' => $comedies,
@@ -77,33 +71,6 @@ class VelflixController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         $playMovie = Http::withToken(config('services.tmdb.token'))
@@ -113,39 +80,5 @@ class VelflixController extends Controller
         return view('movies.show', [
             'movies' => $playMovie,
         ]);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }
