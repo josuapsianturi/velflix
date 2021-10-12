@@ -10,12 +10,14 @@
             Popular on Velflix &rsaquo;
         </h2>
 
-        <div class="flex flex-nowrap">
+        <div class="carousel" data-flickity='{ "freeScroll": true, "wrapAround": true }'
+            class="flex carousel flex-nowrap">
+            @foreach ($popular as $movie)
             <!-- Cards -->
-            <div class="flex flex-col overflow-hidden rounded-md" style="background-color:  #181818">
+            <div class="flex flex-col mr-3 overflow-hidden rounded-md" style="background-color:  #181818">
                 <div class="w-72">
                     <img class="w-full h-56 cursor-pointer"
-                        src="{{ 'https://image.tmdb.org/t/p/w500' . $popular[2]['poster_path'] }}"
+                        src="{{ 'https://image.tmdb.org/t/p/w500' . $movie['poster_path'] }}"
                         alt="poster">
                 </div>
 
@@ -46,14 +48,14 @@
 
                 <!-- Rating -->
                 <div class="flex mx-4">
-                    <span class="font-bold text-green-500">{{ $popular[1]['vote_average'] * 10 . '%' }} Match</span>
+                    <span class="font-bold text-green-500">{{ $movie['vote_average'] * 10 . '%' }} Match</span>
                 </div>
                 <!-- End Rating -->
 
                 <!-- Genres -->
                 <div class="flex m-4">
                     <span class="flex text-sm font-medium text-gray-400 truncate">
-                    @foreach ($popular[1]['genre_ids'] as $genre)
+                    @foreach ($movie['genre_ids'] as $genre)
                     {{-- @dump($genre) --}}
                     @if ($loop->index)
                         &middot;
@@ -66,6 +68,7 @@
                 <!-- End Genres -->
             </div>
             <!-- End Cards -->
+            @endforeach
         </div>
     </section>
     <!-- End Popular Movies -->
