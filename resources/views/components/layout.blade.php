@@ -16,18 +16,9 @@
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     @livewireStyles
 </head>
-<body class="h-screen" style="background-color: #141414">
+<body>
 
-        @include('layouts.partials.header')
+    {{ $slot }}
 
-        @include('layouts.partials.nav')
-
-        @include('movies.index')
-
-        @include('layouts.partials.footer')
-
-    @livewireScripts
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>

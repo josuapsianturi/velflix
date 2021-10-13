@@ -5,10 +5,10 @@
         <div class="flex items-center justify-start h-full px-16">
             <div class="flex-col hidden w-2/5 py-12 space-y-4 lg:flex ">
                 <h1 class="text-6xl font-semibold text-yellow-300 ">
-                    {{ $velflix[0]['title'] }}
+                    {{ $popular[0]['title'] }}
                 </h1>
                 <p class="text-lg font-semibold text-white">
-                    {{ $velflix[0]['overview'] }}
+                    {{ $popular[0]['overview'] }}
                 </p>
                 <div class="flex flex-row w-full space-x-4">
                     <button
@@ -32,6 +32,6 @@
 
     <div class="object-cover -mt-8 lg:h-screen">
         <img class="object-contain w-screen h-screen"
-        src="{{ 'https://image.tmdb.org/t/p/w500/' . $velflix[0]['poster_path'] }}">
+        src="{{ 'https://image.tmdb.org/t/p/w500/' . $popular[0]['poster_path'] }}">
     </div>
 </div>
