@@ -20,6 +20,10 @@
                         required
                         >
 
+                    @error('name')
+                        <p class="mt-2 text-xs text-red-500">{{ $message }}</p>
+                    @enderror
+
                 </div>
                 <!-- End Name -->
 
@@ -38,6 +42,11 @@
                         >
 
                 </div>
+
+                @error('username')
+                    <p class="mt-2 text-xs text-red-500">{{ $message }}</p>
+                @enderror
+
                 <!-- End Username -->
 
                 <!-- Email -->
@@ -54,9 +63,9 @@
                         required
                         >
 
-                    @error('email')
-                        <p class="mt-2 text-xs text-red-500">{{ $message }}</p>
-                    @enderror
+                        @error('email')
+                            <p class="mt-2 text-xs text-red-500">{{ $message }}</p>
+                        @enderror
                 </div>
                 <!-- End Email -->
 
