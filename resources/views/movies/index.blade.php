@@ -5,7 +5,7 @@
 
 <div class="container px-4 pt-16 mx-auto">
     <!-- Popular Movies -->
-    <sectionc x-data="{ open: false}" >
+    <section x-data="{ open: false}" >
         <h2 class="mb-4 text-lg antialiased font-bold tracking-wider text-gray-200">
             Popular on Velflix &rsaquo;
         </h2>
@@ -163,7 +163,7 @@
         </div>
         @endforeach
 
-    </sectionc>
+    </section>
     <!-- End Popular Movies -->
 
 

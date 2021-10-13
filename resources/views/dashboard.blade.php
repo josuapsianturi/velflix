@@ -1,4 +1,6 @@
 <x-layout>
+    @include('partials.header')
+
 <nav>
     <div class="relative flex flex-col bg-gray-300">
         <img class="absolute top-0 bottom-0 z-0 object-cover w-full h-full"
