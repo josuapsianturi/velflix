@@ -28,6 +28,6 @@ class RegisterController extends Controller
         User::create($attributes);
 
         // dd('success validation succeded');
-        return redirect('/');
+        return redirect('/movies')->with('success', 'Your account has been created');
     }
 }

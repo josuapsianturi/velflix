@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <!-- Alpine Plugins -->
-    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-    <!-- Alpine CDN -->
-    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-
-    {{-- <script src="{{ mix('js/app.js') }}"></script> --}}
-</head>
-<body class="text-white bg-black">
-
+<x-layout>
 <nav>
     <div class="relative flex flex-col bg-gray-300">
         <img class="absolute top-0 bottom-0 z-0 object-cover w-full h-full"
@@ -37,7 +20,7 @@
             <h1 class="w-full px-12 text-4xl font-bold text-center lg:px-0 lg:text-6xl md:w-1/2">Unlimited movies,
                 TV shows and more.</h1>
             <p class="px-12 mt-6 text-xl text-center md:text-2xl">Watch anywhere. Cancel anytime.</p>
-            @include('layouts.partials.register')
+            @include('partials.register')
         </div>
 </nav>
 
@@ -131,12 +114,11 @@
 <!-- End FAQ -->
 
 <section class="z-30 flex flex-col items-center justify-center py-40 text-white lg:py-32">
-    @include('layouts.partials.register')
+    @include('partials.register')
 </section>
 
 <div class="w-full h-3" style="background-color: #222"></div>
 
-    @include('layouts.partials.footer')
+    @include('partials.footer')
 
-</body>
-</html>
+</x-layout>

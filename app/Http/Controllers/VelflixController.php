@@ -58,7 +58,7 @@ class VelflixController extends Controller
         });
         // dd($genres);
 
-        return view('layouts.app', [
+        return view('main', [
             'popular' => $popular,
             'genres' => $genres,
             'trending' => $trending,
