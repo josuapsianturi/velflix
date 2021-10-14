@@ -16,6 +16,9 @@
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     @livewireStyles
 </head>
+<style>
+    [x-cloak] { display: none !important; }
+</style>
 <body class="bg-black">
 
     {{ $slot }}
