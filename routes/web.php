@@ -7,14 +7,14 @@ use Illuminate\Contracts\Session\Session;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/movies', [VelflixController::class, 'index'])->name('velflix.index');
-Route::get('/movie/{watch}', [VelflixController::class, 'show'])->name('movies.show');
+Route::get('/movies', [VelflixController::class, 'index'])->name('velflix.index')->middleware('auth');
+Route::get('/movie/{watch}', [VelflixController::class, 'show'])->name('movies.show')->middleware('auth');
 Route::view('/', 'home');
 
 Route::get('register', [RegisterController::class, 'create'])->middleware('guest');
 Route::post('register', [RegisterController::class, 'store'])->middleware('guest');
 
-Route::get('login', [SessionsController::class, 'create'])->middleware('guest');
+Route::get('login', [SessionsController::class, 'create'])->name('login')->middleware('guest');
 Route::post('login', [SessionsController::class, 'store'])->middleware('guest');
 Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth');
 
