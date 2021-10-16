@@ -34,4 +34,8 @@ return [
         'token' => env('TMDB_TOKEN'),
     ],
 
+    'mailchimp' => [
+        'key' => env('MAILCHIMP_KEY')
+    ]
+
 ];

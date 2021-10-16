@@ -40,7 +40,7 @@
             <h1 class="w-full px-12 text-4xl font-bold text-center lg:px-0 lg:text-6xl md:w-1/2">Unlimited movies,
                 TV shows and more.</h1>
             <p class="px-12 mt-6 text-xl text-center md:text-2xl">Watch anywhere. Cancel anytime.</p>
-            @include('partials.register')
+            @include('partials.subscribe')
         </div>
 </nav>
 
@@ -134,7 +134,7 @@
 <!-- End FAQ -->
 
 <section class="z-30 flex flex-col items-center justify-center py-40 text-white lg:py-32">
-    @include('partials.register')
+    @include('partials.subscribe')
 </section>
 
 <div class="w-full h-3" style="background-color: #222"></div>

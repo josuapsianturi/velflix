@@ -1,11 +1,11 @@
-<p class="px-12 text-center">Ready to watch? Enter your email to create or restart your membership.
+<p class="px-12 text-center">Want us to email you occasionally with Vetflix news?
 </p>
 <div class="flex flex-col w-full h-32 px-12 pt-4 lg:px-0 lg:flex-row lg:w-1/2 lg:h-16">
     <input class="flex-grow h-32 px-2 lg:h-16" placeholder="Email address" />
     <div
         class="mx-auto bg-red-600 h-32 mt-3 lg:h-16 lg:mt-0 lg:mx-0.5 flex items-center text-center justify-center w-56 text-white">
         <p class="inline-flex text-2xl">
-            Get started
+            Subscribe
             <span class="w-6 p-1 my-auto ml-2">
                 <svg fill="currentColor" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002"
