@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/movies', [VelflixController::class, 'index'])->name('velflix.index');
 Route::get('/movie/{watch}', [VelflixController::class, 'show'])->name('movies.show');
-Route::view('/', 'dashboard');
+Route::view('/', 'home');
 
 Route::get('register', [RegisterController::class, 'create'])->middleware('guest');
 Route::post('register', [RegisterController::class, 'store'])->middleware('guest');

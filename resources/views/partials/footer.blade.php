@@ -29,13 +29,4 @@
         <div>Corporate Information</div>
     </div>
     </div>
-
-    <div class="my-6">
-        <div class="mx-6 my-6">
-            <button>Service Code</button>
-        </div>
-        <div class="mx-6">
-            &#169; copyright
-        </div>
-    </div>
 </footer>

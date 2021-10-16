@@ -41,7 +41,6 @@
                                                     'event' => null,
                                                 ])
                                             @endpush
-                                            {{-- {{ $movies['vote_average'] * 10 . '%' }} Match --}}
                                         </div>
                                     </div>
 
