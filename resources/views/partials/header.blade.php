@@ -1,6 +1,6 @@
 <div class="fixed top-0 z-50 w-full text-white bg-black body-font">
     <div class="flex flex-col flex-wrap items-center p-5 px-16 md:flex-row">
-        <a class="flex items-center mb-4 text-2xl font-bold text-red-600 uppercase title-font md:mb-0">
+        <a class="flex items-center mb-4 text-2xl font-bold uppercase title-font md:mb-0" style="color: #e50914">
             Velflix
         </a>
 

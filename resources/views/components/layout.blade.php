@@ -18,7 +18,7 @@
 <style>
     [x-cloak] { display: none !important; }
 </style>
-<body class="bg-black">
+<body style="background-color: #141414">
 
     {{ $slot }}
 
