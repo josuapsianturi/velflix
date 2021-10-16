@@ -1,9 +1,9 @@
 <x-layout>
-    @include('partials.header')
+    <x-header />
 
-    @include('partials.nav')
+    <x-nav :popular='$popular' />
 
     @include('movies.index')
 
-    @include('partials.footer')
+    <x-footer />
 </x-layout>

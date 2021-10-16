@@ -5,24 +5,31 @@ use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\VelflixController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('ping', function () {
+Route::post('newsletter', function () {
+    request()->validate(['email' => 'required|email']);
+
     $mailchimp = new \MailchimpMarketing\ApiClient();
 
     $mailchimp->setConfig([
         'apiKey' => config('services.mailchimp.key'),
         'server' => 'us5'
     ]);
-
     // $response = $mailchimp->ping->get();
-
     // $response = $mailchimp->lists->getListMembersInfo('9fd0cf36ce');
+     // ddd($response);
 
-    $response = $mailchimp->lists->addListMember('9fd0cf36ce', [
-        'email_address' => 'jeffry@gmail.com',
-        'status' => 'subscribed'
-    ]);
+    try{
+        $response = $mailchimp->lists->addListMember('9fd0cf36ce', [
+            'email_address' => request('email'),
+            'status' => 'subscribed'
+        ]);
+        } catch (\Exception $e) {
+            throw \Illuminate\Validation\ValidationException::withMessages([
+                'email' => 'This email coulld not be edded to our newsletter.'
+        ]);
+    }
 
-    ddd($response);
+    return redirect('/')->with('success', 'You are now signed up to our newsletter!');
 });
 
 
