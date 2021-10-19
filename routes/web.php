@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
@@ -20,3 +21,5 @@ Route::get('login', [SessionsController::class, 'create'])->name('login')->middl
 Route::post('login', [SessionsController::class, 'store'])->middleware('guest');
 Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth');
 
+Route::get('login/google', [LoginController::class, 'redirectToProvider']);
+Route::get('login/google/callback', [LoginController::class, 'handleProviderCallback']);

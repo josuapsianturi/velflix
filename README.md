@@ -71,7 +71,7 @@ Here is how you can run the project locally:
  - Create a key and copy API key
  - open the velflix project, go to .env file and paste it into `MAILCHIMP_KEY=paste API key here`
  - Go to web.php and paste this code at the bottom or you can follow the documentation [here](https://mailchimp.com/developer/marketing/api/lists/get-lists-info/)
- ```sh
+ ```php
     Route::get('ping', function() {
     $mailchimp = new MailchimpMarketing\ApiClient();
     $mailchimp->setConfig([
