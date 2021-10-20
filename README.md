@@ -93,21 +93,25 @@ Here is how you can run the project locally:
 - visit `localhost:8000` or `velflix.test` test email for subscribing , and refresh your admin mailchimp it should be Your audience has increased 1 contact. 
 
 14. Setup Laravel Socialite login with Google account (optional)
- - Go to the [Google Developers Console](https://console.cloud.google.com/apis) get `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET`. paste it into `.env` file.
+ - Go to the [Google Developers Console](https://console.cloud.google.com/apis) get "GOOGLE_CLIENT_ID" and "GOOGLE_CLIENT_SECRET". paste it into `.env` file.
  if you need help, you can follow these steps:
- - Click Credentials menu, click `select a project` at the navbar > ALL > NOo organization > new project.
- - project name `velflix`, location should be no organization > Create.
- - Go to `OAuth consent screen menu` > Select External and Create
- - App Information > app name `velflix` choose user support email, fill email in developer contact information, save and continue
- - Go to `Credentials` menu > click `+Create Credentials` at the top > select `OAuth Client ID` > select Application type `Web Application` > Name `velflix`
- - At the Authorized redirect URIs > `+ADD URI` > paste this into it `http://127.0.0.1:8000/login/google/callback` > Create.
- > you can change the port to be `8080` or others, but make sure when you run `php artisan serve`, your project run in the same port.
+ - Click Credentials menu, click "select a project" at the navbar > ALL > No organization > new project.
+ - project name 'velflix', location should be no organization > Create.
+ - Go to OAuth consent screen menu > Select External and Create
+ - App Information > app name 'velflix' choose user support email, fill email in developer contact information, save and continue
+ - Go to Credentials menu > click `+Create Credentials` at the top > select "OAuth Client ID" > select Application type "Web Application" > Name 'velflix'
+ - At the Authorized redirect URIs > +ADD URI > paste this into it `http://127.0.0.1:8000/login/google/callback` > Create.
+
+ > NOTE: you can change the port to be `8080` or others, but make sure when you run `php artisan serve`, your project run in the same port.
+
  -  Copy `Your Client ID` and `Your Client Secret` 
  - Open velflix project, go to `.env` file and paste it in `GOOGLE_CLIENT_ID=paste_here` and `GOOGLE_CLIENT_SECRET=paste_here` and we ready to go
  ```sh
 php artisan serve
  ```
- - let's test, visit the project in your browser > `Log in` > `Login Google` > choose account > and if success, it should be redirect to the movies page. Let me know if get in trouble.
+ - let's test, visit the project in your browser > Login > Login Google > choose account > and if success, it should be redirect to the movies page. 
+ 
+ > Let me know if get in trouble.
 
 
 ## Contributing
