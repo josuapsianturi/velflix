@@ -60,16 +60,16 @@ Here is how you can run the project locally:
 
 1. Newsletter feature configuration (optional)
  - Go to [mailchimp](https://mailchimp.com)
- - Register your account, follow this step if you need help:
+ - Register your account, get API key and paste it into `.env` file. If you need help, you can follow these steps:
     - Click Sign Up Free
-    - Enter your data and check your email
+    - Enter your data, check your email and verify
     - select Free, Next
     - Do you have a list of contacts? (NO)
     - Do you sell products or services online? (Neither, Products)
     - continue
  - Go to Profile > Extras > API keys
  - Create a key and copy API key
- - open the velflix project, go to .env file and paste it into `MAILCHIMP_KEY=paste API key here`
+ - open the velflix project, go to `.env` file and paste it into `MAILCHIMP_KEY=paste API key here`
  - Go to web.php and paste this code at the bottom or you can follow the documentation [here](https://mailchimp.com/developer/marketing/api/lists/get-lists-info/)
  ```php
     Route::get('ping', function() {
@@ -83,11 +83,33 @@ Here is how you can run the project locally:
     ddd($response);
     });
  ```
- > make sure you fill in the `server` correctly, check the link at the top of your admin Mailchimp, for me its `https://us5.admin.mailchimp.com/account/api/` so i give the value of server is `us5`.
- - visit `localhost:8000/ping` or `velflix.test/ping` and copy value of id in the ` "lists" > 0 > "id"`
- - open project, in .env file paste the id into `MAILCHIMP_LIST_SUBSCRIBERS=paste id here` and we ready to go
- - visit `localhost:8000` or `velflix.test` test email for subscribing , and refresh your admin mailchimp it should be Your audience has 1 contacts.
+
+
+ > make sure you fill in the `server` correctly, check the link at the top of your admin Mailchimp, for me its `https://us5.admin.mailchimp.com/account/api/` so i give the value of server is `us5`. if you get us6, change the server value to be `us6`.
  
+
+- visit `localhost:8000/ping` or `velflix.test/ping` and copy value of id in the ` "lists" > 0 > "id"`
+- open project, in .env file paste the id into `MAILCHIMP_LIST_SUBSCRIBERS=paste id here` and we ready to go
+- visit `localhost:8000` or `velflix.test` test email for subscribing , and refresh your admin mailchimp it should be Your audience has increased 1 contact. 
+
+14. Setup Laravel Socialite login with Google account (optional)
+ - Go to the [Google Developers Console](https://console.cloud.google.com/apis) get `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET`. paste it into `.env` file.
+ if you need help, you can follow these steps:
+ - Click Credentials menu, click `select a project` at the navbar > ALL > NOo organization > new project.
+ - project name `velflix`, location should be no organization > Create.
+ - Go to `OAuth consent screen menu` > Select External and Create
+ - App Information > app name `velflix` choose user support email, fill email in developer contact information, save and continue
+ - Go to `Credentials` menu > click `+Create Credentials` at the top > select `OAuth Client ID` > select Application type `Web Application` > Name `velflix`
+ - At the Authorized redirect URIs > `+ADD URI` > paste this into it `http://127.0.0.1:8000/login/google/callback` > Create.
+ > you can change the port to be `8080` or others, but make sure when you run `php artisan serve`, your project run in the same port.
+ -  Copy `Your Client ID` and `Your Client Secret` 
+ - Open velflix project, go to `.env` file and paste it in `GOOGLE_CLIENT_ID=paste_here` and `GOOGLE_CLIENT_SECRET=paste_here` and we ready to go
+ ```sh
+php artisan serve
+ ```
+ - let's test, visit the project in your browser > `Log in` > `Login Google` > choose account > and if success, it should be redirect to the movies page. Let me know if get in trouble.
+
+
 ## Contributing
 Pull requests are welcome.
 
