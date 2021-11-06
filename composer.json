@@ -17,7 +17,8 @@
         "livewire/livewire": "^2.4",
         "mailchimp/marketing": "^3.0",
         "owenvoke/blade-entypo": "^1.4",
-        "owenvoke/blade-fontawesome": "^1.8"
+        "owenvoke/blade-fontawesome": "^1.8",
+        "sentry/sentry-laravel": "^2.9"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

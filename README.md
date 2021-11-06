@@ -115,11 +115,11 @@ php artisan serve
  ```
  - let's test, visit the project in your browser > Login > Login Google > choose account > and if success, it should be redirect to the movies page. 
  
- > Let me know if get in trouble.
+ > Let me know if you get in trouble.
 
 
 ## Contributing
 Pull requests are welcome.
 
 ## License
-Velflix is open-sourced software licensed under [the MIT license](https://choosealicense.com/licenses/mit/)
+Velflix is open-sourced software licensed under [the MIT license](https://github.com/josuapsianturi/velflix/blob/main/LICENSE)

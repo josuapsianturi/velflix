@@ -23,3 +23,7 @@ Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth'
 
 Route::get('login/google', [LoginController::class, 'redirectToProvider']);
 Route::get('login/google/callback', [LoginController::class, 'handleProviderCallback']);
+
+Route::get('/debug-sentry', function () {
+    throw new Exception('My first Sentry error!');
+});
