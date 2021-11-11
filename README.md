@@ -122,4 +122,4 @@ php artisan serve
 Pull requests are welcome.
 
 ## License
-Velflix is open-sourced software licensed under [the MIT license](https://github.com/josuapsianturi/velflix/blob/main/LICENSE)
+Velflix is an open-sourced software licensed under [the MIT license](https://github.com/josuapsianturi/velflix/blob/main/LICENSE)
