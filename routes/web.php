@@ -5,6 +5,7 @@ use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\VelflixController;
+use App\Http\Livewire\AdminController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -23,6 +24,10 @@ Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth'
 
 Route::get('login/google', [LoginController::class, 'redirectToProvider']);
 Route::get('login/google/callback', [LoginController::class, 'handleProviderCallback']);
+
+Route::middleware('can:admin')->group(function () {
+    Route::get('admin', [AdminController::class, 'render']);
+});
 
 Route::get('/debug-sentry', function () {
     throw new Exception('My first Sentry error!');
