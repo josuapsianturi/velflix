@@ -51,6 +51,9 @@
                     @csrf
 
                     <button type="submit" class="block px-8 py-2 font-bold rounded-md hover:text-gray-600 hover:bg-gray-200">Log Out</button>
+                    @can('admin')
+                        <a href="/admin" class="block px-8 py-2 rounded-b-md hover:text-gray-600 hover:bg-gray-200">Admin Dashboard</a>
+                    @endcan
                 </form>
                 </div>
             <!-- End User Profile -->
