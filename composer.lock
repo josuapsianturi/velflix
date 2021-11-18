@@ -1343,16 +1343,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.71.0",
+            "version": "v8.72.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "d822426d75ecf8e8ccd3ccd404db7202d1a9875e"
+                "reference": "5168f8589195a5f48b9c41ad2eec77a6c15f14f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/d822426d75ecf8e8ccd3ccd404db7202d1a9875e",
-                "reference": "d822426d75ecf8e8ccd3ccd404db7202d1a9875e",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/5168f8589195a5f48b9c41ad2eec77a6c15f14f3",
+                "reference": "5168f8589195a5f48b9c41ad2eec77a6c15f14f3",
                 "shasum": ""
             },
             "require": {
@@ -1511,7 +1511,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-11-16T15:00:50+00:00"
+            "time": "2021-11-17T15:15:08+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -9708,5 +9708,5 @@
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
