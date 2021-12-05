@@ -26,9 +26,5 @@ Route::get('login/google', [LoginController::class, 'redirectToProvider']);
 Route::get('login/google/callback', [LoginController::class, 'handleProviderCallback']);
 
 Route::middleware('can:admin')->group(function () {
-    Route::get('admin', [AdminController::class, 'render']);
-});
-
-Route::get('/debug-sentry', function () {
-    throw new Exception('My first Sentry error!');
+    Route::view('admin', 'livewire.admin-controller');
 });
