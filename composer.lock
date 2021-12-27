@@ -8200,16 +8200,16 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "1.14.0",
+            "version": "v1.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "d86dfc2e2a3cd366cee475e52c6bb3bbc371aa0e"
+                "reference": "bbcd7380b0ebf3961ee21409db7b38bc31d69a13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/d86dfc2e2a3cd366cee475e52c6bb3bbc371aa0e",
-                "reference": "d86dfc2e2a3cd366cee475e52c6bb3bbc371aa0e",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/bbcd7380b0ebf3961ee21409db7b38bc31d69a13",
+                "reference": "bbcd7380b0ebf3961ee21409db7b38bc31d69a13",
                 "shasum": ""
             },
             "require": {
@@ -8261,9 +8261,9 @@
             ],
             "support": {
                 "issues": "https://github.com/phpspec/prophecy/issues",
-                "source": "https://github.com/phpspec/prophecy/tree/1.14.0"
+                "source": "https://github.com/phpspec/prophecy/tree/v1.15.0"
             },
-            "time": "2021-09-10T09:02:12+00:00"
+            "time": "2021-12-08T12:19:24+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -8585,16 +8585,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.5.10",
+            "version": "9.5.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "c814a05837f2edb0d1471d6e3f4ab3501ca3899a"
+                "reference": "2406855036db1102126125537adb1406f7242fdd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c814a05837f2edb0d1471d6e3f4ab3501ca3899a",
-                "reference": "c814a05837f2edb0d1471d6e3f4ab3501ca3899a",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2406855036db1102126125537adb1406f7242fdd",
+                "reference": "2406855036db1102126125537adb1406f7242fdd",
                 "shasum": ""
             },
             "require": {
@@ -8672,11 +8672,11 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.10"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.11"
             },
             "funding": [
                 {
-                    "url": "https://phpunit.de/donate.html",
+                    "url": "https://phpunit.de/sponsors.html",
                     "type": "custom"
                 },
                 {
@@ -8684,7 +8684,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-09-25T07:38:51+00:00"
+            "time": "2021-12-25T07:07:57+00:00"
         },
         {
             "name": "sebastian/cli-parser",
