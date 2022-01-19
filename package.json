@@ -10,11 +10,7 @@
         "production": "mix --production"
     },
     "devDependencies": {
-<<<<<<< HEAD
         "autoprefixer": "^10.4.2",
-=======
-        "axios": "^0.25.0",
->>>>>>> e3add0b59ecd5433c147df8483a4050a1c91daee
         "laravel-mix": "^6.0.39",
         "lodash": "^4.17.19",
         "postcss": "^8.4.5",
@@ -23,5 +19,6 @@
     "dependencies": {
         "alpinejs": "^3.8.1",
         "progressbar.js": "^1.1.0"
+        "node-forge": ">=1.0.0"
     }
 }
