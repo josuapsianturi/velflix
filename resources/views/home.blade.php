@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Velflix</title>
     <!-- Tailwind CDN -->
+    {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <!-- Alpine Plugins -->
     <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
