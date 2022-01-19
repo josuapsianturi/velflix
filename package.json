@@ -12,9 +12,7 @@
     "devDependencies": {
 <<<<<<< HEAD
         "autoprefixer": "^10.4.2",
-        "axios": "^0.24.0",
 =======
-        "autoprefixer": "^10.4.1",
         "axios": "^0.25.0",
 >>>>>>> e3add0b59ecd5433c147df8483a4050a1c91daee
         "laravel-mix": "^6.0.39",
