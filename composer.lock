@@ -2196,23 +2196,23 @@
         },
         {
             "name": "mailchimp/marketing",
-            "version": "3.0.72",
+            "version": "3.0.73",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mailchimp/mailchimp-marketing-php.git",
-                "reference": "9292392510d72d651c06113d28bb508d55fdbf07"
+                "reference": "a15500dee2052589c0659e5e7a8524b041e41308"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mailchimp/mailchimp-marketing-php/zipball/9292392510d72d651c06113d28bb508d55fdbf07",
-                "reference": "9292392510d72d651c06113d28bb508d55fdbf07",
+                "url": "https://api.github.com/repos/mailchimp/mailchimp-marketing-php/zipball/a15500dee2052589c0659e5e7a8524b041e41308",
+                "reference": "a15500dee2052589c0659e5e7a8524b041e41308",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
                 "ext-json": "*",
                 "ext-mbstring": "*",
-                "guzzlehttp/guzzle": "^7.2",
+                "guzzlehttp/guzzle": "^6.4 || ^7.2",
                 "guzzlehttp/psr7": "^1.7 || ^2.0",
                 "php": ">=7.2"
             },
@@ -2245,9 +2245,9 @@
                 "swagger"
             ],
             "support": {
-                "source": "https://github.com/mailchimp/mailchimp-marketing-php/tree/v3.0.72"
+                "source": "https://github.com/mailchimp/mailchimp-marketing-php/tree/v3.0.73"
             },
-            "time": "2021-11-02T19:12:10+00:00"
+            "time": "2022-01-19T13:28:13+00:00"
         },
         {
             "name": "monolog/monolog",
