@@ -2197,16 +2197,16 @@
         },
         {
             "name": "mailchimp/marketing",
-            "version": "3.0.73",
+            "version": "3.0.74",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mailchimp/mailchimp-marketing-php.git",
-                "reference": "a15500dee2052589c0659e5e7a8524b041e41308"
+                "reference": "f9d5f31d1a98262b8cb81020d3ddeac6d9a4a31e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mailchimp/mailchimp-marketing-php/zipball/a15500dee2052589c0659e5e7a8524b041e41308",
-                "reference": "a15500dee2052589c0659e5e7a8524b041e41308",
+                "url": "https://api.github.com/repos/mailchimp/mailchimp-marketing-php/zipball/f9d5f31d1a98262b8cb81020d3ddeac6d9a4a31e",
+                "reference": "f9d5f31d1a98262b8cb81020d3ddeac6d9a4a31e",
                 "shasum": ""
             },
             "require": {
@@ -2246,9 +2246,9 @@
                 "swagger"
             ],
             "support": {
-                "source": "https://github.com/mailchimp/mailchimp-marketing-php/tree/v3.0.73"
+                "source": "https://github.com/mailchimp/mailchimp-marketing-php/tree/v3.0.74"
             },
-            "time": "2022-01-19T13:28:13+00:00"
+            "time": "2022-01-24T18:59:15+00:00"
         },
         {
             "name": "monolog/monolog",
