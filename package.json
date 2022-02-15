@@ -14,7 +14,7 @@
         "laravel-mix": "^6.0.41",
         "lodash": "^4.17.19",
         "postcss": "^8.4.6",
-        "tailwindcss": "^3.0.21"
+        "tailwindcss": "^3.0.22"
     },
     "dependencies": {
         "alpinejs": "^3.9.0",
