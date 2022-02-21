@@ -2125,16 +2125,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v2.10.3",
+            "version": "v2.10.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "f7150a3d0386c1d41f51b73a161e3d3e24db5812"
+                "reference": "2d68c61a8edf338534fdd8e2b2750dca2e741439"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/f7150a3d0386c1d41f51b73a161e3d3e24db5812",
-                "reference": "f7150a3d0386c1d41f51b73a161e3d3e24db5812",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/2d68c61a8edf338534fdd8e2b2750dca2e741439",
+                "reference": "2d68c61a8edf338534fdd8e2b2750dca2e741439",
                 "shasum": ""
             },
             "require": {
@@ -2186,7 +2186,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v2.10.3"
+                "source": "https://github.com/livewire/livewire/tree/v2.10.4"
             },
             "funding": [
                 {
@@ -2194,7 +2194,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-02-14T16:44:21+00:00"
+            "time": "2022-02-18T22:35:27+00:00"
         },
         {
             "name": "mailchimp/marketing",
