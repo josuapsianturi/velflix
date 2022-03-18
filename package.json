@@ -19,6 +19,6 @@
     "dependencies": {
         "alpinejs": "^3.9.1",
         "progressbar.js": "^1.1.0",
-        "node-forge": ">=1.2.1"
+        "node-forge": ">=1.3.0"
     }
 }
