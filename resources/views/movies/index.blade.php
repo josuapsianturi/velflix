@@ -1,4 +1,4 @@
-<div class="container p-4 mx-auto">
+<div class="container p-4 mx-auto space-y-8">
     <!-- Popular Movies -->
     <x-movies>
         <x-slot:category> Popular on Velflix &rsaquo; </x-slot:category>

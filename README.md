@@ -14,7 +14,11 @@ Velflix is a Laravel [Netflix](https://netflix.com) clone project using TALL sta
 
 see full page [here](https://raw.githubusercontent.com/josuapsianturi/velflix/main/public/img/home-full-page.png)
 
-![screenshot](https://raw.githubusercontent.com/josuapsianturi/velflix/main/public/img/screenshot1.png)
+![movies header](https://raw.githubusercontent.com/josuapsianturi/velflix/main/public/img/movies-header.png)
+
+![movies](https://raw.githubusercontent.com/josuapsianturi/velflix/main/public/img/movies.png)
+
+see full page [here](https://raw.githubusercontent.com/josuapsianturi/velflix/main/public/img/movies-full-page.png)
 
 ## Installation
 Here is how you can run the project locally:
