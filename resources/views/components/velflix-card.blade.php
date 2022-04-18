@@ -49,6 +49,8 @@
         @if ($loop->index)
             &middot;
             {{ $genres->get($genre)}}
+        @else
+            @break
         @endif
 
         @endforeach
