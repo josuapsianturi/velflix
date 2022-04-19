@@ -20,8 +20,7 @@ see full page [here](https://raw.githubusercontent.com/josuapsianturi/velflix/ma
 
 see full page [here](https://raw.githubusercontent.com/josuapsianturi/velflix/main/public/img/movies-full-page.png)
 
-## Software versions
--   Ubuntu 20.04.4 LTS
+## Requirements
 -   Node v14.19.1
 -   npm 6.14.16
 -   composer 2.2.6
