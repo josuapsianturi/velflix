@@ -17,7 +17,8 @@
         "mailchimp/marketing": "^3.0",
         "owenvoke/blade-entypo": "^2.0.0",
         "owenvoke/blade-fontawesome": "^2.0.0",
-        "sentry/sentry-laravel": "^2.9"
+        "sentry/sentry-laravel": "^2.9",
+        "spatie/laravel-view-models": "^1.5"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",

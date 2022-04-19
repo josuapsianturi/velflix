@@ -27,7 +27,7 @@
                             </button>
                         </div>
 
-                        <div class="flex my-4">
+                        <div class="flex my-6">
                             <div class="w-4/6">
                                 <span class="flex mb-3 space-x-4">
                                     <div class="flex items-center">
@@ -37,8 +37,11 @@
                                             @endpush
                                         </div>
                                     </div>
-
-                                    <p>{{ date('Y', strtotime($movies['release_date'] )) }}</p>
+                                    <div class="mt-2">
+                                        <div class="font-semibold text-white">{{ $movies['original_title'] }}</div>
+                                        <div class="text-sm text-gray-500">{{ date('Y', strtotime($movies['release_date'] )) }}</div>
+                                    </div>
+                                    {{-- <p>{{ date('Y', strtotime($movies['release_date'] )) }}</p> --}}
                                 </span>
 
                                 <span>
