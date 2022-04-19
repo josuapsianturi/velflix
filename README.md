@@ -63,6 +63,14 @@ Here is how you can run the project locally:
     ```
     php artisan migrate
     ```
+1. Run seeder
+    ```
+    php artisan db:seed
+    ```
+    this command will create 2 users (admin and normal user):
+     > email: user@gmail.com , password: password 
+
+     > email: admin@gmail.com , password: password
 
 1. Run server 
     > for valet users visit `velflix.test` in your favorite browser
