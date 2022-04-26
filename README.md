@@ -33,35 +33,47 @@ Here is how you can run the project locally:
     ```sh
     git clone https://github.com/josuapsianturi/velflix.git
     ```
+
 1. Go into the project root directory
     ```sh
     cd velflix
     ```
-1. Install PHP dependencies 
-    ```sh
-    composer install
-    ```
-1. install front-end dependencies
-    ```sh
-    npm install && npm run dev
-    ```
-1. Create account and get an API key themoviedb [ here](https://www.themoviedb.org/settings/api). Make sure to copy `API Read Access Token (v4 auth)`.
-1. Copy .env.example file to .env
+
+1. Copy .env.example file to .env file
     ```sh
     cp .env.example .env
     ```
+
+1. Create database `velflix`
+
+1. Create account and get an API key themoviedb [ here](https://www.themoviedb.org/settings/api). Make sure to copy `API Read Access Token (v4 auth)`.
+
+1. Create database velflix (you can change `database_name`)
+
 1. Go to `.env` file 
     - set database credentials (`DB_DATABASE=velflix`, `DB_USERNAME=root`, `DB_PASSWORD=`)
     - paste `TMDB_TOKEN=(your API key)` 
+
 1. Generate key 
     ```sh
     php artisan key:generate
     ```
-1. Create database `velflix`
+
+1. Install PHP dependencies 
+    ```sh
+    composer install
+    ```
+
+1. install front-end dependencies
+    ```sh
+    npm install && npm run dev
+    ```
+
 1. Run migration
     ```
     php artisan migrate
     ```
+    
 1. Run seeder
     ```
     php artisan db:seed
@@ -77,6 +89,7 @@ Here is how you can run the project locally:
     ```sh
     php artisan serve
     ```  
+
 1. Visit `localhost:8000` in your favorite browser.     
 
     > Make sure to follow your Laravel local Development Environment.
@@ -107,9 +120,7 @@ Here is how you can run the project locally:
     });
  ```
 
-
  > make sure you fill in the `server` correctly, check the link at the top of your admin Mailchimp, for me its `https://us5.admin.mailchimp.com/account/api/` so i give the value of server is `us5`. if you get us6, change the server value to be `us6`.
- 
 
 - visit `localhost:8000/ping` or `velflix.test/ping` and copy value of id in the ` "lists" > 0 > "id"`
 - open project, in .env file paste the id into `MAILCHIMP_LIST_SUBSCRIBERS=paste id here` and we ready to go
@@ -129,13 +140,12 @@ Here is how you can run the project locally:
 
  -  Copy `Your Client ID` and `Your Client Secret` 
  - Open velflix project, go to `.env` file and paste it in `GOOGLE_CLIENT_ID=paste_here` and `GOOGLE_CLIENT_SECRET=paste_here` and we ready to go
- ```sh
-php artisan serve
- ```
+    ```sh
+    php artisan serve
+    ```
  - let's test, visit the project in your browser > Login > Login Google > choose account > and if success, it should be redirect to the movies page. 
  
  > Let me know if you get in trouble.
-
 
 ## Contributing
 Pull requests are welcome.
