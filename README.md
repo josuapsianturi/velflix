@@ -43,16 +43,14 @@ Here is how you can run the project locally:
     ```sh
     cp .env.example .env
     ```
-
-1. Create database `velflix`
+1. Create database `velflix` (you can change database name)
 
 1. Create account and get an API key themoviedb [ here](https://www.themoviedb.org/settings/api). Make sure to copy `API Read Access Token (v4 auth)`.
-
-1. Create database velflix (you can change `database_name`)
 
 1. Go to `.env` file 
     - set database credentials (`DB_DATABASE=velflix`, `DB_USERNAME=root`, `DB_PASSWORD=`)
     - paste `TMDB_TOKEN=(your API key)` 
+    > Make sure to follow your database username and password
 
 1. Generate key 
     ```sh
