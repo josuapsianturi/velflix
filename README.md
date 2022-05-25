@@ -22,11 +22,14 @@ see full page [here](https://raw.githubusercontent.com/josuapsianturi/velflix/ma
 see full page [here](https://raw.githubusercontent.com/josuapsianturi/velflix/main/public/img/movies-full-page.png)
 
 ## Requirements
--   Node v14.19.1
--   npm 6.14.16
--   composer 2.2.6
--   php 8.0.17
--   mysql 8.0.27
+
+Package | Version
+--- | ---
+[Node](https://nodejs.org/en/) | V14.19.1+
+[Npm](https://nodejs.org/en/)  | V6.14.16+ 
+[Composer](https://getcomposer.org/)  | V2.2.6+
+[Php](https://www.php.net/)  | V8.0.17+
+[Mysql](https://www.mysql.com/)  |V 8.0.27+
 
 ## Installation
 
