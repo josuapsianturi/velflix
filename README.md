@@ -6,7 +6,8 @@
 
 Velflix is a Laravel [Netflix](https://netflix.com) clone project using TALL stack ([Tailwindcss](https://tailwindcss.com/), [Alpinejs](https://github.com/alpinejs/alpine/), [Laravel](https://laravel.com/), [Livewire](https://laravel-livewire.com/) ).
 
-> Note: Work in Progress.
+> **Note**
+> Work in Progress.
 
 ## View
 
@@ -28,6 +29,10 @@ see full page [here](https://raw.githubusercontent.com/josuapsianturi/velflix/ma
 -   mysql 8.0.27
 
 ## Installation
+
+> **Warning**
+> Make sure to follow the requirements first.
+
 Here is how you can run the project locally:
 1. Clone this repo
     ```sh
