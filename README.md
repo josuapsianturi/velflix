@@ -162,6 +162,8 @@ Here is how you can run the project locally:
     ./vendor/bin/pest
 ```
 
+![movies](https://raw.githubusercontent.com/josuapsianturi/velflix/main/public/img/testing.png)
+
 ## Contributing
 Pull requests are welcome.
 
