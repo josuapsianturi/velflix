@@ -153,6 +153,14 @@ Here is how you can run the project locally:
  
  > Let me know if you get in trouble.
 
+## Testing
+
+> **Warning**
+> Every time you run testing, you should run `php artisan db:seed` first
+```sh
+    ./vendor/bin/pest
+```
+
 ## Contributing
 Pull requests are welcome.
 
