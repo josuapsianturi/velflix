@@ -11,7 +11,7 @@
     },
     "devDependencies": {
         "autoprefixer": "^10.4.7",
-        "laravel-mix": "^6.0.43",
+        "laravel-mix": "^6.0.44",
         "lodash": "^4.17.19",
         "postcss": "^8.4.14",
         "tailwindcss": "^3.0.24"
