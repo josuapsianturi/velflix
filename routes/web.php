@@ -5,7 +5,6 @@ use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\VelflixController;
-use App\Http\Livewire\AdminController;
 use Illuminate\Support\Facades\Route;
 
 

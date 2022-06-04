@@ -55,6 +55,13 @@
                                 </span>
                                 <span class="text-gray-500">
                                     Genres:
+                                    <span class="flex text-sm font-medium text-gray-400 truncate">
+                                        @foreach ($movies['genres'] as $genre)
+                                            <div class="">
+                                                {{ $genre['name'] }},
+                                            </div>
+                                        @endforeach
+                                    </span>
                                 </span>
                             </div>
                         </div>
