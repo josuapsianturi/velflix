@@ -1,4 +1,4 @@
-<h1 align="center" >Velflix</h1>
+<h1 align="center" style="color: red">Velflix</h1>
 <p align="center"><a href="https://github.com/josuapsianturi/velflix/blob/main/LICENSE"><img src="https://poser.pugx.org/cpriego/valet-linux/license.svg" alt="License"></a>
 </p>
 
@@ -7,9 +7,17 @@
 Velflix is a Laravel [Netflix](https://netflix.com) clone project using TALL stack ([Tailwindcss](https://tailwindcss.com/), [Alpinejs](https://github.com/alpinejs/alpine/), [Laravel](https://laravel.com/), [Livewire](https://laravel-livewire.com/) ).
 
 > **Note**
-> Work in Progress.
+> Work in Progress
 
-## View
+* [Screenshots](#screenshots)
+* [Requirements](#requirements)
+* [Installation](#installation)
+* [Testing](#testing)
+* [Contributing](#contributing)
+* [License](#license)
+
+<a name="screenshots"></a>
+## Screenshots
 
 ![home page](https://raw.githubusercontent.com/josuapsianturi/velflix/main/public/img/home.png)
 
@@ -21,6 +29,7 @@ see full page [here](https://raw.githubusercontent.com/josuapsianturi/velflix/ma
 
 see full page [here](https://raw.githubusercontent.com/josuapsianturi/velflix/main/public/img/movies-full-page.png)
 
+<a name="requirements"></a>
 ## Requirements
 
 Package | Version
@@ -31,6 +40,7 @@ Package | Version
 [Php](https://www.php.net/)  | V8.0.17+
 [Mysql](https://www.mysql.com/)  |V 8.0.27+
 
+<a name="installation"></a>
 ## Installation
 
 > **Warning**
@@ -153,6 +163,7 @@ Here is how you can run the project locally:
  
  > Let me know if you get in trouble.
 
+<a name="testing"></a>
 ## Testing
 
 > **Warning**
@@ -164,8 +175,10 @@ Here is how you can run the project locally:
 
 ![movies](https://raw.githubusercontent.com/josuapsianturi/velflix/main/public/img/testing.png)
 
+<a name="contributing"></a>
 ## Contributing
 Pull requests are welcome.
 
+<a name="license"></a>
 ## License
 Velflix is an open-sourced software licensed under [the MIT license](https://github.com/josuapsianturi/velflix/blob/main/LICENSE)
