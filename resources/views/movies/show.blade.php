@@ -1,5 +1,6 @@
 <x-layout>
-    <div class="fixed top-0 left-0 flex items-center w-full h-full overflow-y-auto shadow-lg">
+    {{-- @dump($movies) --}}
+    <div class="flex pt-4 items-center w-full h-full overflow-y-auto shadow-lg">
         <div class="container mx-auto overflow-y-auto rounded-lg lg:px-56">
             <div class="bg-gray-800 rounded-xl">
                 <div class="relative overflow-hidden responsive-container" style="padding-top: 56.25%">
