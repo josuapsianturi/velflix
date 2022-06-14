@@ -29,6 +29,8 @@ see full page [here](https://raw.githubusercontent.com/josuapsianturi/velflix/ma
 
 see full page [here](https://raw.githubusercontent.com/josuapsianturi/velflix/main/public/img/movies-full-page.png)
 
+![Detail movies](https://raw.githubusercontent.com/josuapsianturi/velflix/main/public/img/details-movie.png)
+
 <a name="requirements"></a>
 ## Requirements
 
