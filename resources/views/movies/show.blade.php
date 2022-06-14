@@ -42,7 +42,6 @@
                                         <div class="font-semibold text-white">{{ $movies['original_title'] }}</div>
                                         <div class="text-sm text-gray-500">{{ date('Y', strtotime($movies['release_date'] )) }}</div>
                                     </div>
-                                    {{-- <p>{{ date('Y', strtotime($movies['release_date'] )) }}</p> --}}
                                 </span>
 
                                 <span>
@@ -51,8 +50,16 @@
                             </div>
 
                             <div class="w-2/6">
-                                <span class="flex mb-3 text-gray-500">
+                                <span class="text-gray-500">
                                     Cast:
+                                    <span class="flex text-sm font-medium text-gray-400 truncate">
+                                        @foreach ($movies['credits']['cast'] as $cast)
+                                            <div class="">
+                                                {{ $cast['name'] }},
+                                            </div>
+                                        @endforeach
+                                    </span>
+
                                 </span>
                                 <span class="text-gray-500">
                                     Genres:
