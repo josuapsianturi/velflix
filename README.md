@@ -72,14 +72,14 @@ Here is how you can run the project locally:
     - paste `TMDB_TOKEN=(your API key)` 
     > Make sure to follow your database username and password
 
-1. Generate key 
-    ```sh
-    php artisan key:generate
-    ```
-
 1. Install PHP dependencies 
     ```sh
     composer install
+    ```
+
+1. Generate key 
+    ```sh
+    php artisan key:generate
     ```
 
 1. install front-end dependencies

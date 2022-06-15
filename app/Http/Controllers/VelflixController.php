@@ -77,7 +77,7 @@ class VelflixController extends Controller
             ->get('https://api.themoviedb.org/3/movie/' . $id . '?append_to_response=credits,videos,images')
             ->json();
 
-        return view('movies.show', [
+        return view('components.movies.show', [
             'movies' => $playMovie,
         ]);
     }
