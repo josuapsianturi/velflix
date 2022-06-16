@@ -1,3 +1,5 @@
+@props(['movies'])
+
 <div class="">
     <div class="mb-4 text-lg antialiased font-bold tracking-wider text-gray-200">
         {{ $category }}
@@ -5,7 +7,6 @@
 
     <div class="carousel" data-flickity='{ "freeScroll": true, "wrapAround": true }'
         class="flex carousel flex-nowrap">
-        {{-- {{ $slot}} --}}
         @foreach ($movies as $movie)
         <div @click="open = true" class="flex flex-col mr-3 overflow-hidden rounded-md" style="background-color:  #181818">
             <div @click="open = true" class="w-72">
@@ -52,14 +53,12 @@
             <div class="flex m-4">
                 <span class="flex text-sm font-medium text-gray-400 truncate">
                 @foreach ($movie['genre_ids'] as $genre)
-                {{-- @dump($genre) --}}
-                @if ($loop->index)
-                    &middot;
-                    {{ $genres->get($genre)}}
-                @else
-                    @break
-                @endif
-
+                    @if ($loop->index)
+                        &middot;
+                        {{ $genres->get($genre)}}
+                    @else
+                        @break
+                    @endif
                 @endforeach
                 </span>
             </div>
