@@ -1,6 +1,6 @@
-{{-- @dump($velflix) --}}
+@props(['popular'])
 
-<div class="relative w-full h-screen bg-black">
+<section class="relative w-full h-screen bg-black">
     <div class="absolute z-10 w-full h-full ">
         <div class="flex items-center justify-start h-full px-16">
             <div class="flex-col hidden w-2/5 py-12 space-y-4 lg:flex ">
@@ -26,12 +26,10 @@
         </div>
     </div>
 
-    <div class="absolute bottom-0 w-full h-64 bg-gradient-to-t from-black">
-    </div>
-
+    <div class="absolute bottom-0 w-full h-64 bg-gradient-to-t from-black"></div>
 
     <div class="object-cover -mt-8 lg:h-screen">
         <img class="object-contain w-screen h-screen"
         src="{{ 'https://image.tmdb.org/t/p/w500/' . $popular[0]['poster_path'] }}">
     </div>
-</div>
+</section>

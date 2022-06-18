@@ -1,5 +1,5 @@
+
 <x-layout>
-    {{-- @dump($movies) --}}
     <div class="flex pt-4 items-center w-full h-full overflow-y-auto shadow-lg">
         <div class="container mx-auto overflow-y-auto rounded-lg lg:px-56">
             <div class="bg-gray-800 rounded-xl">
@@ -33,9 +33,12 @@
                                 <span class="flex mb-3 space-x-4">
                                     <div class="flex items-center">
                                         <div id="vote_average" class="relative w-16 h-16 text-white bg-gray-800 rounded-full">
-                                            @push('scripts')
-                                                <x-rating-script :slug="'vote_average'" :rating="$movies['vote_average'] * 10" :event="null" />
-                                            @endpush
+                                            {{-- @push('scripts')
+                                                <x-rating-script :slug="'vote_average'" :rating="$movies['vote_average'] * 10" :event='null' />
+                                            @endpush --}}
+                                            <div class="flex mx-4">
+                                                <span class="font-bold text-green-500">{{ $movies['vote_average'] * 10 . '%' }}</span>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="mt-2">

@@ -37,7 +37,7 @@
 
     <!-- Rating -->
     <div class="flex mx-4">
-        <span class="font-bold text-green-500">{{ $movie['vote_average'] * 10 . '%' }} Match</span>
+        <span class="font-bold text-green-500">{{ $movie['vote_average'] * 10 . '%' }}  Match</span>
     </div>
     <!-- End Rating -->
 
@@ -45,14 +45,12 @@
     <div class="flex m-4">
         <span class="flex text-sm font-medium text-gray-400 truncate">
         @foreach ($movie['genre_ids'] as $genre)
-        {{-- @dump($genre) --}}
-        @if ($loop->index)
-            &middot;
-            {{ $genres->get($genre)}}
-        @else
-            @break
-        @endif
-
+            @if ($loop->index)
+                &middot;
+                {{ $genres->get($genre)}}
+            @else
+                @break
+            @endif
         @endforeach
         </span>
     </div>
