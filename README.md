@@ -168,6 +168,8 @@ Here is how you can run the project locally:
 <a name="testing"></a>
 ## Testing
 
+### <a href="https://pestphp.com/">Pest</a>
+
 > **Warning**
 > Every time you run testing, you should run `php artisan db:seed` first
 
@@ -176,6 +178,18 @@ Here is how you can run the project locally:
 ```
 
 ![movies](https://raw.githubusercontent.com/josuapsianturi/velflix/main/public/img/testing.png)
+
+### <a href="https://www.cypress.io/">Cypress</a> ( E2E Testing )
+
+1. Run the cypress:boilerplate command to copy over the initial boilerplate files for your Cypress tests.
+    ```sh
+        php artisan cypress:boilerplate
+    ```
+
+2. Let's run it now
+    ```sh
+        npx cypress open
+    ```
 
 <a name="contributing"></a>
 ## Contributing
