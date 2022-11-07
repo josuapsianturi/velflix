@@ -1406,16 +1406,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.4.1",
+            "version": "2.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "69568e4293f4fa993f3b0e51c9723e1e17c41379"
+                "reference": "67c26b443f348a51926030c83481b85718457d3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/69568e4293f4fa993f3b0e51c9723e1e17c41379",
-                "reference": "69568e4293f4fa993f3b0e51c9723e1e17c41379",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/67c26b443f348a51926030c83481b85718457d3d",
+                "reference": "67c26b443f348a51926030c83481b85718457d3d",
                 "shasum": ""
             },
             "require": {
@@ -1505,7 +1505,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.4.1"
+                "source": "https://github.com/guzzle/psr7/tree/2.4.3"
             },
             "funding": [
                 {
@@ -1521,7 +1521,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-08-28T14:45:39+00:00"
+            "time": "2022-10-26T14:07:24+00:00"
         },
         {
             "name": "http-interop/http-factory-guzzle",
@@ -2509,16 +2509,16 @@
         },
         {
             "name": "mailchimp/marketing",
-            "version": "3.0.78",
+            "version": "3.0.80",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mailchimp/mailchimp-marketing-php.git",
-                "reference": "c5724fc28be79c97a85ce81bc5a97b32a7fde450"
+                "reference": "c1a38f7248d8de7de412418fed8dae759b9e4b97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mailchimp/mailchimp-marketing-php/zipball/c5724fc28be79c97a85ce81bc5a97b32a7fde450",
-                "reference": "c5724fc28be79c97a85ce81bc5a97b32a7fde450",
+                "url": "https://api.github.com/repos/mailchimp/mailchimp-marketing-php/zipball/c1a38f7248d8de7de412418fed8dae759b9e4b97",
+                "reference": "c1a38f7248d8de7de412418fed8dae759b9e4b97",
                 "shasum": ""
             },
             "require": {
@@ -2558,9 +2558,9 @@
                 "swagger"
             ],
             "support": {
-                "source": "https://github.com/mailchimp/mailchimp-marketing-php/tree/v3.0.78"
+                "source": "https://github.com/mailchimp/mailchimp-marketing-php/tree/v3.0.80"
             },
-            "time": "2022-08-02T15:00:42+00:00"
+            "time": "2022-11-02T19:19:48+00:00"
         },
         {
             "name": "monolog/monolog",
