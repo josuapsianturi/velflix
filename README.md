@@ -193,6 +193,13 @@ Here is how you can run the project locally:
         npx cypress open
     ```
 
+### <a href="https://laravel.com/docs/9.x/pint">Laravel Pint</a> ( code style fixer )
+
+3. To run coding style checks
+    ```sh
+        ./vendor/bin/pint
+    ```
+
 <a name="contributing"></a>
 ## Contributing
 Pull requests are welcome.
