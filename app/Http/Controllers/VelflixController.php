@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
 class VelflixController extends Controller
@@ -54,7 +53,7 @@ class VelflixController extends Controller
         // dd($animation);
 
         $genres = collect($velflixgenres)->mapWithKeys(function ($genre) {
-            return [ $genre['id'] => $genre['name'] ];
+            return [$genre['id'] => $genre['name']];
         });
         // dd($genres);
 
@@ -74,7 +73,7 @@ class VelflixController extends Controller
     public function show($id)
     {
         $playMovie = Http::withToken(config('services.tmdb.token'))
-            ->get('https://api.themoviedb.org/3/movie/' . $id . '?append_to_response=credits,videos,images')
+            ->get('https://api.themoviedb.org/3/movie/'.$id.'?append_to_response=credits,videos,images')
             ->json();
 
         return view('components.movies.show', [

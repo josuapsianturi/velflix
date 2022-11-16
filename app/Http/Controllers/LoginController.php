@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Models\User;
 use Laravel\Socialite\Facades\Socialite;
 
@@ -20,19 +19,18 @@ class LoginController extends Controller
 
         $user = User::firstOrCreate(
             [
-                'provider_id'=> $googleUser->getId(),
+                'provider_id' => $googleUser->getId(),
             ],
             [
                 'email' => $googleUser->getEmail(),
                 'name' => $googleUser->getName(),
             ]
-            );
+        );
 
         // Log the user in
         auth()->login($user);
 
         // Redirect to movies
         return redirect('/movies')->with('success', 'Your account has been created');
-
     }
 }

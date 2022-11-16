@@ -7,7 +7,6 @@ use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\VelflixController;
 use Illuminate\Support\Facades\Route;
 
-
 Route::view('/', 'home');
 Route::post('newsletter', NewsletterController::class);
 
@@ -24,7 +23,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/movie/{watch}', [VelflixController::class, 'show'])->name('movies.show');
 });
 
-Route::controller(LoginController::class)->group( function () {
+Route::controller(LoginController::class)->group(function () {
     Route::get('login/google', 'redirectToProvider');
     Route::get('login/google/callback', 'handleProviderCallback');
 });

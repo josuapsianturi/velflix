@@ -7,6 +7,7 @@ use Illuminate\View\Component;
 class velflixCard extends Component
 {
     public $velflix;
+
     /**
      * Create a new component instance.
      *

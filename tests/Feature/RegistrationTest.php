@@ -6,8 +6,7 @@ uses(RefreshDatabase::class);
 
 test('test registration screen can berendered')->get('/register')->assertStatus(200);
 
-test('test new users can register', function ()
-{
+test('test new users can register', function () {
     $response = $this->post('/register', [
         'name' => 'User Test',
         'username' => 'userTest',
@@ -18,4 +17,3 @@ test('test new users can register', function ()
     $this->assertAuthenticated();
     $response->assertRedirect('/movies');
 });
-
