@@ -193,11 +193,17 @@ Here is how you can run the project locally:
         npx cypress open
     ```
 
-### <a href="https://laravel.com/docs/9.x/pint">Laravel Pint</a> ( code style fixer )
+### <a href="https://laravel.com/docs/9.x/pint">Laravel Pint</a>
 
 3. To run coding style checks
     ```sh
         ./vendor/bin/pint
+    ```
+### <a href="https://github.com/nunomaduro/larastan">Larastan </a>
+
+4. to run static analysis with PHPStan
+    ```sh
+    ./vendor/bin/phpstan analyse
     ```
 
 <a name="contributing"></a>
