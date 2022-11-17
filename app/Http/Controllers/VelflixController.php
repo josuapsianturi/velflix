@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Http;
 
 class VelflixController extends Controller
 {
+    /**
+     * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
+     */
     public function index()
     {
         $popular = Http::withToken(config('services.tmdb.token'))
@@ -52,6 +55,7 @@ class VelflixController extends Controller
         ->json()['results'];
         // dd($animation);
 
+        // @phpstan-ignore-next-line
         $genres = collect($velflixgenres)->mapWithKeys(function ($genre) {
             return [$genre['id'] => $genre['name']];
         });
@@ -70,6 +74,10 @@ class VelflixController extends Controller
         ]);
     }
 
+    /**
+     * @param mixed $id
+     * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
+     */
     public function show($id)
     {
         $playMovie = Http::withToken(config('services.tmdb.token'))

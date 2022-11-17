@@ -7,11 +7,17 @@ use Laravel\Socialite\Facades\Socialite;
 
 class LoginController extends Controller
 {
+    /**
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
     public function redirectToProvider()
     {
         return Socialite::driver('google')->redirect();
     }
 
+    /**
+     * @return \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
+     */
     public function handleProviderCallback()
     {
         $googleUser = Socialite::driver('google')->user();

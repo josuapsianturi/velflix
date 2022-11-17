@@ -6,14 +6,13 @@ use Illuminate\View\Component;
 
 class velflixCard extends Component
 {
+    /** @var mixed */
     public $velflix;
 
     /**
-     * Create a new component instance.
-     *
      * @return void
      */
-    public function __construct($movie)
+    public function __construct(mixed $movie)
     {
         $this->velflix = $movie;
     }

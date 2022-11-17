@@ -6,11 +6,17 @@ use Illuminate\Validation\ValidationException;
 
 class SessionsController extends Controller
 {
+    /**
+     * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
+     */
     public function create()
     {
         return view('auth.login');
     }
 
+    /**
+     * @return \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
+     */
     public function store()
     {
         // Validate the request
@@ -33,6 +39,11 @@ class SessionsController extends Controller
         ]);
     }
 
+    /**
+     * @return \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
+
+
+     */
     public function destroy()
     {
         // ddd('log the use out');

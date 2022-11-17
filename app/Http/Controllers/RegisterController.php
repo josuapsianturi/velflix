@@ -8,11 +8,17 @@ use Illuminate\Validation\Rule;
 
 class RegisterController extends Controller
 {
+    /**
+     * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
+     */
     public function create()
     {
         return view('auth.register');
     }
 
+    /**
+     * @return \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
+     */
     public function store()
     {
         // return request()->all();
