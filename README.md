@@ -179,8 +179,6 @@ Here is how you can run the project locally:
     ./vendor/bin/pest
 ```
 
-![movies](https://raw.githubusercontent.com/josuapsianturi/velflix/main/public/img/testing.png)
-
 ### <a href="https://www.cypress.io/">Cypress</a> ( E2E Testing )
 
 1. Run the cypress:boilerplate command to copy over the initial boilerplate files for your Cypress tests.

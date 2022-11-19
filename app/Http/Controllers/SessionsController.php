@@ -41,8 +41,6 @@ class SessionsController extends Controller
 
     /**
      * @return \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
-
-
      */
     public function destroy()
     {
