@@ -179,16 +179,11 @@ Here is how you can run the project locally:
     ./vendor/bin/pest
 ```
 
-### <a href="https://www.cypress.io/">Cypress</a> ( E2E Testing )
+### <a href="https://www.cypress.io/">Cypress</a>
 
-1. Run the cypress:boilerplate command to copy over the initial boilerplate files for your Cypress tests.
+1. To run E2E testing
     ```sh
-        php artisan cypress:boilerplate
-    ```
-
-2. Let's run it now
-    ```sh
-        npx cypress open
+        npx cypress run
     ```
 
 ### <a href="https://laravel.com/docs/9.x/pint">Laravel Pint</a>
