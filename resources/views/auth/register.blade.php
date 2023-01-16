@@ -41,12 +41,11 @@
                         required
                         >
 
+                    @error('username')
+                        <p class="mt-2 text-xs text-red-500">{{ $message }}</p>
+                    @enderror
+
                 </div>
-
-                @error('username')
-                    <p class="mt-2 text-xs text-red-500">{{ $message }}</p>
-                @enderror
-
                 <!-- End Username -->
 
                 <!-- Email -->
