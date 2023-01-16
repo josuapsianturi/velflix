@@ -86,7 +86,7 @@ Here is how you can run the project locally:
 
 1. install front-end dependencies
     ```sh
-    npm install && npm run dev
+    npm install && npx mix
     ```
 
 1. Run migration
