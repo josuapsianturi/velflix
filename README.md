@@ -192,7 +192,7 @@ Here is how you can run the project locally:
     ```sh
         ./vendor/bin/pint
     ```
-### <a href="https://laravel.com/docs/9.x/pint">Laravel Pint</a>
+### <a href="https://psalm.dev/">Laravel Psalm</a>
 
 3. To run static analysis with Psalm
     ```sh
