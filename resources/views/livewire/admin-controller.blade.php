@@ -15,12 +15,12 @@
 <style>
     [x-cloak] { display: none !important; }
 </style>
-<body class="text-gray-100 bg-black">
+<body class="bg-black text-gray-100">
 
 <x-header />
 
 
-<section class="text-xl text-white mt-96">
+<section class="mt-96 text-xl text-white">
     This is Admin Page
 </section>
 </body>

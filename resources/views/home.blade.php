@@ -16,7 +16,7 @@
 <style>
     [x-cloak] { display: none !important; }
 </style>
-<body class="text-gray-100 bg-black">
+<body class="bg-black text-gray-100">
 
 <x-header />
 
@@ -27,8 +27,8 @@
 <x-gap />
 
 <section>
-    <div class="flex justify-center p-12 full">
-        <div class="flex flex-col items-center justify-center w-3/5">
+    <div class="full flex justify-center p-12">
+        <div class="flex w-3/5 flex-col items-center justify-center">
             <div>
                 <div class="text-4xl">Enjoy on your TV.</div>
                 <div class="text-2xl">
@@ -43,9 +43,9 @@
 <x-gap />
 
 <section>
-    <div class="flex justify-center p-12 full">
+    <div class="full flex justify-center p-12">
         <img width="600" src="{{ asset('img/img2.png') }}" />
-        <div class="flex flex-col items-center justify-center w-3/5">
+        <div class="flex w-3/5 flex-col items-center justify-center">
             <div>
                 <div class="text-4xl">Download your shows to watch offline.</div>
                 <div class="text-2xl">
@@ -58,8 +58,8 @@
 <x-gap />
 
 <section>
-    <div class="flex justify-center p-12 full">
-        <div class="flex flex-col items-center justify-center w-3/5">
+    <div class="full flex justify-center p-12">
+        <div class="flex w-3/5 flex-col items-center justify-center">
             <div>
                 <div class="text-4xl">Watch everywhere.</div>
                 <div class="text-2xl">
