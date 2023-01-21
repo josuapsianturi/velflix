@@ -5,6 +5,9 @@ namespace App\Http\Livewire;
 use Illuminate\Support\Facades\Http;
 use Livewire\Component;
 
+/**
+ * @psalm-suppress UndefinedClass
+ */
 class SearchVelflix extends Component
 {
     public ?string $searchVelflix = '';

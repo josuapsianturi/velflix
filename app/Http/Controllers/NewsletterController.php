@@ -9,7 +9,7 @@ use Illuminate\Validation\ValidationException;
 class NewsletterController extends Controller
 {
     /**
-     * @param \App\Services\Newsletter $newsletter
+     * @param  \App\Services\Newsletter  $newsletter
      * @return \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
      */
     public function __invoke(Newsletter $newsletter)

@@ -188,13 +188,19 @@ Here is how you can run the project locally:
 
 ### <a href="https://laravel.com/docs/9.x/pint">Laravel Pint</a>
 
-3. To run coding style checks
+2. To run coding style checks
     ```sh
         ./vendor/bin/pint
     ```
+### <a href="https://laravel.com/docs/9.x/pint">Laravel Pint</a>
+
+3. To run static analysis with Psalm
+    ```sh
+        ./vendor/bin/psalm
+    ```
 ### <a href="https://github.com/nunomaduro/larastan">Larastan </a>
 
-4. to run static analysis with PHPStan
+4. To run static analysis with PHPStan
     ```sh
     ./vendor/bin/phpstan analyse
     ```

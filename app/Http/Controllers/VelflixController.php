@@ -55,9 +55,11 @@ class VelflixController extends Controller
         ->json()['results'];
         // dd($animation);
 
-        // @phpstan-ignore-next-line
-        $genres = collect($velflixgenres)->mapWithKeys(function ($genre) {
-            return [$genre['id'] => $genre['name']];
+        /**
+         * @psalm-suppress UndefinedClass
+         */
+        $genres = collect($velflixgenres)->mapWithKeys(function ($genre) { // @phpstan-ignore-line
+        return [$genre['id'] => $genre['name']];
         });
         // dd($genres);
 
@@ -75,7 +77,7 @@ class VelflixController extends Controller
     }
 
     /**
-     * @param mixed $id
+     * @param  mixed  $id
      * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
      */
     public function show($id)

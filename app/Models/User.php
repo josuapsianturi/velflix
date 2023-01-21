@@ -42,7 +42,7 @@ class User extends Authenticatable
 
     // Mutators
     /**
-     * @param mixed $password
+     * @param  mixed  $password
      * @return void
      */
     public function setPasswordAttribute($password)
