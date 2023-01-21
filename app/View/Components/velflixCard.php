@@ -10,9 +10,10 @@ class velflixCard extends Component
     public $velflix;
 
     /**
+     * @param  mixed  $movie
      * @return void
      */
-    public function __construct(mixed $movie)
+    public function __construct($movie)
     {
         $this->velflix = $movie;
     }

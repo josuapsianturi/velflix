@@ -7,8 +7,8 @@ use MailchimpMarketing\ApiClient;
 class Newsletter
 {
     /**
-     * @param string $email
-     * @param string|null $list
+     * @param  string  $email
+     * @param  string|null  $list
      * @return mixed
      */
     public function subscribe(string $email, string $list = null)
@@ -23,7 +23,6 @@ class Newsletter
     }
 
     /**
-     *
      * @return \MailchimpMarketing\ApiClient
      */
     protected function client()
