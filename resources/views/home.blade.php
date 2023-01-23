@@ -7,7 +7,7 @@
     <title>Velflix</title>
     <!-- Tailwind CDN -->
     {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    @vite('resources/css/app.css')
     <!-- Alpine Plugins -->
     <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <!-- Alpine CDN -->
