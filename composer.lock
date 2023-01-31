@@ -2668,16 +2668,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.65.0",
+            "version": "2.66.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "09acf64155c16dc6f580f36569ae89344e9734a3"
+                "reference": "496712849902241f04902033b0441b269effe001"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/09acf64155c16dc6f580f36569ae89344e9734a3",
-                "reference": "09acf64155c16dc6f580f36569ae89344e9734a3",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/496712849902241f04902033b0441b269effe001",
+                "reference": "496712849902241f04902033b0441b269effe001",
                 "shasum": ""
             },
             "require": {
@@ -2766,7 +2766,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-01-06T15:55:01+00:00"
+            "time": "2023-01-29T18:53:47+00:00"
         },
         {
             "name": "nette/schema",
@@ -4689,16 +4689,16 @@
         },
         {
             "name": "spatie/laravel-view-models",
-            "version": "1.5.2",
+            "version": "1.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-view-models.git",
-                "reference": "a84700af22321402cb8c353a4e3972d07ce37ce0"
+                "reference": "a6faf8e0a3afee5faad6826897e27a2d09337679"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-view-models/zipball/a84700af22321402cb8c353a4e3972d07ce37ce0",
-                "reference": "a84700af22321402cb8c353a4e3972d07ce37ce0",
+                "url": "https://api.github.com/repos/spatie/laravel-view-models/zipball/a6faf8e0a3afee5faad6826897e27a2d09337679",
+                "reference": "a6faf8e0a3afee5faad6826897e27a2d09337679",
                 "shasum": ""
             },
             "require": {
@@ -4706,7 +4706,8 @@
                 "php": "^7.3|^8.0"
             },
             "require-dev": {
-                "orchestra/testbench": "^6.23|^7.0"
+                "orchestra/testbench": "^6.23|^7.0",
+                "pestphp/pest": "^1.22"
             },
             "type": "library",
             "extra": {
@@ -4741,7 +4742,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-view-models/issues",
-                "source": "https://github.com/spatie/laravel-view-models/tree/1.5.2"
+                "source": "https://github.com/spatie/laravel-view-models/tree/1.5.3"
             },
             "funding": [
                 {
@@ -4753,7 +4754,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-02-23T07:43:40+00:00"
+            "time": "2023-01-30T14:05:28+00:00"
         },
         {
             "name": "symfony/console",
