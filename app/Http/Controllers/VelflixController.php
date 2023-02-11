@@ -2,66 +2,57 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 
 class VelflixController extends Controller
 {
     /**
-     * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
+     * @param  mixed  $genreId
+     * @return mixed
      */
-    public function index()
+    private function getMoviesByGenre($genreId)
     {
-        $popular = Http::withToken(config('services.tmdb.token'))
-        ->get('https://api.themoviedb.org/3/movie/popular')
-        ->json()['results'];
-        // dd($popular);
-
-        $trending = Http::withToken(config('services.tmdb.token'))
-        ->get('https://api.themoviedb.org/3/trending/movie/day')
-        ->json()['results'];
-
-        $velflixgenres = Http::withToken(config('services.tmdb.token'))
-        ->get('https://api.themoviedb.org/3/genre/movie/list')
-        ->json()['genres'];
-        // dd($velflixgenres);
-
-        $comedies = Http::withToken(config('services.tmdb.token'))
-        ->get('https://api.themoviedb.org/3/discover/movie?api_key=MY_API_KEY&with_genres=35')
-        ->json()['results'];
-        // dd($comedies);
-
-        $action = Http::withToken(config('services.tmdb.token'))
-        ->get('https://api.themoviedb.org/3/discover/movie?api_key=MY_API_KEY&with_genres=28')
-        ->json()['results'];
-        // dd($action);
-
-        $western = Http::withToken(config('services.tmdb.token'))
-        ->get('https://api.themoviedb.org/3/discover/movie?api_key=MY_API_KEY&with_genres=37')
-        ->json()['results'];
-        // dd($western);
-
-        $horror = Http::withToken(config('services.tmdb.token'))
-        ->get('https://api.themoviedb.org/3/discover/movie?api_key=MY_API_KEY&with_genres=27')
-        ->json()['results'];
-        // dd($horror);
-
-        $thriller = Http::withToken(config('services.tmdb.token'))
-        ->get('https://api.themoviedb.org/3/discover/movie?api_key=MY_API_KEY&with_genres=53')
-        ->json()['results'];
-        // dd($thriller);
-
-        $animation = Http::withToken(config('services.tmdb.token'))
-        ->get('https://api.themoviedb.org/3/discover/movie?api_key=MY_API_KEY&with_genres=16')
-        ->json()['results'];
-        // dd($animation);
-
-        /**
-         * @psalm-suppress UndefinedClass
-         */
-        $genres = collect($velflixgenres)->mapWithKeys(function ($genre) { // @phpstan-ignore-line
-        return [$genre['id'] => $genre['name']];
+        return Cache::remember('movies_genre_'.$genreId, 60 * 60, function () use ($genreId) {
+            return Http::withToken(config('services.tmdb.token'))
+            ->get('https://api.themoviedb.org/3/discover/movie', [
+                'with_genres' => $genreId,
+            ])->json()['results'];
         });
-        // dd($genres);
+    }
+
+    public function index(): View|Factory
+    {
+        $popular = Cache::remember('movies_popular', 60 * 60, function () {
+            return Http::withToken(config('services.tmdb.token'))
+            ->get('https://api.themoviedb.org/3/movie/popular')
+                ->json()['results'];
+        });
+
+        $trending = Cache::remember('movies_trending', 60 * 60, function () {
+            return Http::withToken(config('services.tmdb.token'))
+                ->get('https://api.themoviedb.org/3/trending/movie/day')
+                ->json()['results'];
+        });
+
+        $velflixgenres = Cache::remember('movies_genres', 60 * 60, function () {
+            return Http::withToken(config('services.tmdb.token'))
+            ->get('https://api.themoviedb.org/3/genre/movie/list')
+            ->json()['genres'];
+        });
+
+        $comedies = $this->getMoviesByGenre(35);
+        $action = $this->getMoviesByGenre(28);
+        $western = $this->getMoviesByGenre(37);
+        $horror = $this->getMoviesByGenre(27);
+        $thriller = $this->getMoviesByGenre(53);
+        $animation = $this->getMoviesByGenre(16);
+
+        $genres = collect($velflixgenres)->mapWithKeys(function ($genre) {
+            return [$genre['id'] => $genre['name']];
+        });
 
         return view('main', [
             'popular' => $popular,
@@ -78,13 +69,15 @@ class VelflixController extends Controller
 
     /**
      * @param  mixed  $id
-     * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
+     * @return View|Factory
      */
-    public function show($id)
+    public function show($id): View|Factory
     {
-        $playMovie = Http::withToken(config('services.tmdb.token'))
+        $playMovie = Cache::remember('movie_'.$id, 3600, function () use ($id) {
+            return Http::withToken(config('services.tmdb.token'))
             ->get('https://api.themoviedb.org/3/movie/'.$id.'?append_to_response=credits,videos,images')
             ->json();
+        });
 
         return view('components.movies.show', [
             'movies' => $playMovie,
