@@ -50,7 +50,8 @@ class VelflixController extends Controller
         $thriller = $this->getMoviesByGenre(53);
         $animation = $this->getMoviesByGenre(16);
 
-        $genres = collect($velflixgenres)->mapWithKeys(function ($genre) {
+        /** @psalm-suppress UndefinedClass **/
+        $genres = collect($velflixgenres)->mapWithKeys(function ($genre) {  /** @phpstan-ignore-line */
             return [$genre['id'] => $genre['name']];
         });
 
