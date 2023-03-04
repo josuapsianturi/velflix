@@ -1,18 +1,18 @@
 <x-layout>
     <section class="px-6 py-8">
-        <main class="max-w-lg p-6 mx-auto mt-10 bg-gray-100 border border-gray-200 rounded-xl">
-            <h1 class="text-xl font-bold text-center">Log In</h1>
+        <main class="mx-auto mt-10 max-w-lg rounded-xl border border-gray-200 bg-gray-100 p-6">
+            <h1 class="text-center text-xl font-bold">Log In</h1>
 
             <form method="post" action="/login" class="mt-10">
                 @csrf
 
                 <!-- Email -->
                 <div class="mb-6">
-                    <label for="email" class="block mb-2 text-xs font-bold text-gray-700 uppercase">
+                    <label for="email" class="mb-2 block text-xs font-bold uppercase text-gray-700">
                         Email
                     </label>
 
-                    <input class="w-full p-2 border border-gray-400"
+                    <input class="w-full border border-gray-400 p-2"
                         type="email"
                         name="email"
                         id="email"
@@ -27,11 +27,11 @@
 
                 <!-- Password -->
                 <div class="mb-6">
-                    <label for="password" class="block mb-2 text-xs font-bold text-gray-700 uppercase">
+                    <label for="password" class="mb-2 block text-xs font-bold uppercase text-gray-700">
                         Password
                     </label>
 
-                    <input class="w-full p-2 border border-gray-400"
+                    <input class="w-full border border-gray-400 p-2"
                         type="password"
                         name="password"
                         id="password"
@@ -44,12 +44,12 @@
                 </div>
 
                 <!-- Submit Button -->
-                <div class="flex items-center justify-center mb-6">
+                <div class="mb-6 flex items-center justify-center">
                     <button type="submit"
-                        class="px-4 py-2 mr-4 text-white bg-gray-700 rounded hover:bg-gray-800">
+                        class="mr-4 rounded bg-gray-700 px-4 py-2 text-white hover:bg-gray-800">
                         Log In
                     </button>
-                    <a href="/login/google" class="px-4 py-2 text-white bg-green-700 rounded hover:bg-green-800">Login Google</a>
+                    <a href="/login/google" class="rounded bg-green-700 px-4 py-2 text-white hover:bg-green-800">Login Google</a>
                 </div>
 
             </form>

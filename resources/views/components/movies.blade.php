@@ -6,12 +6,12 @@
     </div>
 
     <div class="carousel" data-flickity='{ "freeScroll": true, "wrapAround": true }'
-        class="flex carousel flex-nowrap">
+        class="carousel flex flex-nowrap">
         @foreach ($movies as $movie)
-        <div @click="open = true" class="flex flex-col mr-3 overflow-hidden rounded-md" style="background-color:  #181818">
+        <div @click="open = true" class="mr-3 flex flex-col overflow-hidden rounded-md" style="background-color:  #181818">
             <div @click="open = true" class="w-72">
                 <a href="{{ route('movies.show', $movie['id']) }}">
-                <img class="w-full h-56 cursor-pointer"
+                <img class="h-56 w-full cursor-pointer"
                     src="{{ 'https://image.tmdb.org/t/p/w500' . $movie['poster_path'] }}"
                     alt="poster">
                 </a>

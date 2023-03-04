@@ -1,18 +1,18 @@
 <x-layout>
     <section class="px-6 py-8">
-        <main class="max-w-lg p-6 mx-auto mt-10 bg-gray-100 border border-gray-200 rounded-xl">
-            <h1 class="text-xl font-bold text-center">Register</h1>
+        <main class="mx-auto mt-10 max-w-lg rounded-xl border border-gray-200 bg-gray-100 p-6">
+            <h1 class="text-center text-xl font-bold">Register</h1>
 
             <form action="/register" method="post">
                 @csrf
 
                 <!-- Name -->
                 <div class="mb-6">
-                    <label for="name" class="block mb-2 text-xs font-bold text-gray-700 uppercase">
+                    <label for="name" class="mb-2 block text-xs font-bold uppercase text-gray-700">
                         Name
                     </label>
 
-                    <input class="w-full p-2 border border-gray-400"
+                    <input class="w-full border border-gray-400 p-2"
                         type="text"
                         name="name"
                         id="name"
@@ -29,11 +29,11 @@
 
                 <!-- Username -->
                 <div class="mb-6">
-                    <label for="username" class="block mb-2 text-xs font-bold text-gray-700 uppercase">
+                    <label for="username" class="mb-2 block text-xs font-bold uppercase text-gray-700">
                         Username
                     </label>
 
-                    <input class="w-full p-2 border border-gray-400"
+                    <input class="w-full border border-gray-400 p-2"
                         type="text"
                         name="username"
                         id="username"
@@ -50,11 +50,11 @@
 
                 <!-- Email -->
                 <div class="mb-6">
-                    <label for="email" class="block mb-2 text-xs font-bold text-gray-700 uppercase">
+                    <label for="email" class="mb-2 block text-xs font-bold uppercase text-gray-700">
                         Email
                     </label>
 
-                    <input class="w-full p-2 border border-gray-400"
+                    <input class="w-full border border-gray-400 p-2"
                         type="email"
                         name="email"
                         id="email"
@@ -70,11 +70,11 @@
 
                 <!-- Password -->
                 <div class="mb-6">
-                    <label for="password" class="block mb-2 text-xs font-bold text-gray-700 uppercase">
+                    <label for="password" class="mb-2 block text-xs font-bold uppercase text-gray-700">
                         Password
                     </label>
 
-                    <input class="w-full p-2 border border-gray-400"
+                    <input class="w-full border border-gray-400 p-2"
                         type="password"
                         name="password"
                         id="password"
@@ -87,7 +87,7 @@
                 <!-- Submit Button -->
                 <div class="mb-6">
                     <button type="submit"
-                        class="px-4 py-2 text-white bg-gray-700 rounded hover:bg-gray-800">
+                        class="rounded bg-gray-700 px-4 py-2 text-white hover:bg-gray-800">
                         Submit
                     </button>
                 </div>

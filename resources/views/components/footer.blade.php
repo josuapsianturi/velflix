@@ -1,9 +1,9 @@
-<footer class="max-w-screen-lg py-8 mx-auto text-sm" style="color: #7c7c7c">
-    <div class="flex my-4 ml-6 space-x-6" style="color: #808080">
-        <x-entypo-facebook class="w-7 h-w-7" />
-        <x-bi-instagram class="w-7 h-7" />
-        <x-bi-twitter class="w-7 h-7" />
-        <x-bi-youtube class="w-7 h-7" />
+<footer class="mx-auto max-w-screen-lg py-8 text-sm" style="color: #7c7c7c">
+    <div class="my-4 ml-6 flex space-x-6" style="color: #808080">
+        <x-entypo-facebook class="h-w-7 w-7" />
+        <x-bi-instagram class="h-7 w-7" />
+        <x-bi-twitter class="h-7 w-7" />
+        <x-bi-youtube class="h-7 w-7" />
     </div>
 
     <div class="flex justify-between">

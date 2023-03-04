@@ -1,6 +1,6 @@
 @props(['popular', 'genres', 'trending', 'comedies', 'action', 'western', 'horror', 'thriller', 'animation'])
 
-<div class="container px-4 my-6 mx-auto space-y-8">
+<div class="container my-6 mx-auto space-y-8 px-4">
     <!-- Popular Movies -->
     <x-movies :movies='$popular'>
         <x-slot:category> Popular on Velflix &rsaquo; </x-slot:category>

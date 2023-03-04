@@ -1,14 +1,14 @@
-<div class="relative p-1 text-white bg-black border border-white ">
-    <x-bi-search class="absolute w-5 h-5 m-1" />
-    <input wire:model.debounce.500ms="searchVelflix" type="text" placeholder="Titles, people, genres" class="ml-8 text-white placeholder-gray-500 bg-black focus:outline-none ">
+<div class="relative border border-white bg-black p-1 text-white">
+    <x-bi-search class="absolute m-1 h-5 w-5" />
+    <input wire:model.debounce.500ms="searchVelflix" type="text" placeholder="Titles, people, genres" class="ml-8 bg-black text-white placeholder-gray-500 focus:outline-none">
 
     @if (strlen($searchVelflix >= 3))
-    <div class="absolute w-64 p-2 mt-2 -ml-2 text-sm bg-gray-700">
+    <div class="absolute mt-2 -ml-2 w-64 bg-gray-700 p-2 text-sm">
         @if ($searchVelflixResults->count() > 0 )
         <ul>
             @foreach ($searchVelflixResults as $searchResults)
             <a href="{{ route('movies.show', $searchResults['id']) }}" class="hover:bg-gray-400">
-            <li class="p-1 border-b border-gray-500">
+            <li class="border-b border-gray-500 p-1">
                     {{ $searchResults['title'] }}
                 </li>
             </a>

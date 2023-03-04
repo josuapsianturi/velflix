@@ -1,7 +1,7 @@
-<p class="px-12 my-3 text-center">Want us to email you occasionally with Vetflix news?
+<p class="my-3 px-12 text-center">Want us to email you occasionally with Vetflix news?
 </p>
 
-<div class="relative inline-block mx-auto lg:bg-gray-100">
+<div class="relative mx-auto inline-block lg:bg-gray-100">
 
     <form method="POST" action="/newsletter" class="text-sm lg:flex">
         @csrf
@@ -17,7 +17,7 @@
                     name="email"
                     type="text"
                     placeholder="Your email address"
-                    class="py-3 pl-5 text-lg text-gray-500 lg:bg-transparent lg:py-0 focus-within:outline-none">
+                    class="py-3 pl-5 text-lg text-gray-500 focus-within:outline-none lg:bg-transparent lg:py-0">
 
                     @error('email')
                         <span class="text-xs text-red-500">{{ $message }}</span>
@@ -26,10 +26,10 @@
         </div>
 
         <button type="submit"
-                class="flex items-center py-2 text-xl text-white transition-colors duration-300 bg-red-600 px-14 hover:bg-red-700 lg:mt-0 lg:ml-3"
+                class="flex items-center bg-red-600 py-2 px-14 text-xl text-white transition-colors duration-300 hover:bg-red-700 lg:mt-0 lg:ml-3"
             >
             Subscribe
-            <span class="w-6 p-1 ml-2">
+            <span class="ml-2 w-6 p-1">
                 <svg fill="currentColor" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002"
                     style="enable-background:new 0 0 512.002 512.002;" xml:space="preserve">

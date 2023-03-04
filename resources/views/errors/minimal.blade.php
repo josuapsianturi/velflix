@@ -17,14 +17,14 @@
         </style>
     </head>
     <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
-            <div class="max-w-xl mx-auto sm:px-6 lg:px-8">
+        <div class="items-top relative flex min-h-screen justify-center bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
+            <div class="mx-auto max-w-xl sm:px-6 lg:px-8">
                 <div class="flex items-center pt-8 sm:justify-start sm:pt-0">
-                    <div class="px-4 text-lg text-gray-500 border-r border-gray-400 tracking-wider">
+                    <div class="border-r border-gray-400 px-4 text-lg tracking-wider text-gray-500">
                         @yield('code')
                     </div>
 
-                    <div class="ml-4 text-lg text-gray-500 uppercase tracking-wider">
+                    <div class="ml-4 text-lg uppercase tracking-wider text-gray-500">
                         @yield('message')
                     </div>
                 </div>
