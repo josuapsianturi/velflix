@@ -50,3 +50,5 @@ RUN php artisan db:seed
 
 # run server
 CMD [ "php", "artisan", "serve", "--host=0.0.0.0" ]
+
+
