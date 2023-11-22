@@ -171,39 +171,40 @@ Here is how you can run the project locally:
 ## Testing
 
 ### <a href="https://pestphp.com/">Pest</a>
-
-> **Warning**
-> Every time you run testing, you should run `php artisan db:seed` first
+1. To run PHP testing for Laravel
+    > **Warning**
+    > Every time you run testing, you should run `php artisan db:seed` first
 
 ```sh
-    ./vendor/bin/pest
+./vendor/bin/pest
 ```
 
 ### <a href="https://www.cypress.io/">Cypress</a>
 
-1. To run E2E testing
-    ```sh
-        npx cypress run
-    ```
+
+2. To run E2E testing
+```sh
+npx cypress run
+```
 
 ### <a href="https://laravel.com/docs/9.x/pint">Laravel Pint</a>
 
-2. To run coding style checks
-    ```sh
-        ./vendor/bin/pint
-    ```
+3. To run coding style checks
+```sh
+./vendor/bin/pint
+```
 ### <a href="https://psalm.dev/">Laravel Psalm</a>
 
-3. To run static analysis with Psalm
-    ```sh
-        ./vendor/bin/psalm
-    ```
+4. To run static analysis with Psalm
+```sh
+./vendor/bin/psalm
+```
 ### <a href="https://github.com/nunomaduro/larastan">Larastan </a>
 
-4. To run static analysis with PHPStan
-    ```sh
-    ./vendor/bin/phpstan analyse
-    ```
+5. To run static analysis with PHPStan
+```sh
+./vendor/bin/phpstan analyse
+```
 
 <a name="contributing"></a>
 ## Contributing
