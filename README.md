@@ -176,7 +176,7 @@ Here is how you can run the project locally:
     > Every time you run testing, you should run `php artisan db:seed` first
 
 ```sh
-./vendor/bin/pest
+vendor/bin/pest
 ```
 
 ### <a href="https://www.cypress.io/">Cypress</a>
@@ -191,19 +191,19 @@ npx cypress run
 
 3. To run coding style checks
 ```sh
-./vendor/bin/pint
+vendor/bin/pint
 ```
 ### <a href="https://psalm.dev/">Laravel Psalm</a>
 
 4. To run static analysis with Psalm
 ```sh
-./vendor/bin/psalm
+vendor/bin/psalm
 ```
 ### <a href="https://github.com/nunomaduro/larastan">Larastan </a>
 
 5. To run static analysis with PHPStan
 ```sh
-./vendor/bin/phpstan analyse
+vendor/bin/phpstan analyse
 ```
 
 <a name="contributing"></a>
