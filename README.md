@@ -208,7 +208,8 @@ vendor/bin/phpstan analyse
 
 <a name="contributing"></a>
 ## Contributing
-Pull requests are welcome.
+
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 <a name="license"></a>
 ## License
