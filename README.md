@@ -51,69 +51,52 @@ Package | Version
 > Make sure to follow the requirements first.
 
 Here is how you can run the project locally:
-1. Clone this repo
-    ```sh
-    git clone https://github.com/josuapsianturi/velflix.git
-    ```
 
-1. Go into the project root directory
-    ```sh
-    cd velflix
-    ```
 
-1. Copy .env.example file to .env file
-    ```sh
-    cp .env.example .env
-    ```
-1. Create database `velflix` (you can change database name)
+## Step 1
+
+Begin by cloning this repository to your machine, and installing all Composer & NPM dependencies.
+
+```bash
+git clone  https://github.com/josuapsianturi/velflix.git
+```
+
+```bash
+cd velflix && composer install && npm install
+```
+
+```bash
+npm run build
+```
+
+
+## Step 2
+
+Make sure the configuration:
+
+```bash
+cp .env.example .env
+```
+
+1. `DB_DATABASE` - Set the database name.
+2. `php artisan key:generate` - Set the application key.
+
+Make sure to fill the `.env` file with the correct values.
+
+
+## Step 3
+
+Next, get API key, run the migration, seeders, and visit the site. If using a tool like Laravel Valet, of course the URL will default to `http://velflix.test`.
 
 1. Create account and get an API key themoviedb [ here](https://www.themoviedb.org/settings/api). Make sure to copy `API Read Access Token (v4 auth)`.
-
-1. Go to `.env` file 
-    - set database credentials (`DB_DATABASE=velflix`, `DB_USERNAME=root`, `DB_PASSWORD=`)
-    - paste `TMDB_TOKEN=(your API key)` 
-    > Make sure to follow your database username and password
-
-1. Install PHP dependencies 
-    ```sh
-    composer install
-    ```
-
-1. Generate key 
-    ```sh
-    php artisan key:generate
-    ```
-
-1. install front-end dependencies
-    ```sh
-    npm install && npm run build
-    ```
-
-1. Run migration
-    ```
-    php artisan migrate
-    ```
-    
-1. Run seeder
-    ```
-    php artisan db:seed
-    ```
+2. Run migration `php artisan migrate`
+3. Run seeders `php artisan db:seed`
     this command will create 2 users (admin and normal user):
-     > email: admin@gmail.com , password: password
+    > email: admin@gmail.com , password: password
+    > email: user@gmail.com , password: password 
+4. Visit `http://velflix.test`
 
-     > email: user@gmail.com , password: password 
-
-1. Run server 
-    > for valet users visit `velflix.test` in your favorite browser
-   
-    ```sh
-    php artisan serve
-    ```  
-
-1. Visit `localhost:8000` in your favorite browser.     
-
-    > Make sure to follow your Laravel local Development Environment.
-
+## Step 4 (Optional)
 1. Newsletter feature configuration (optional)
  - Go to [mailchimp](https://mailchimp.com)
  - Register your account, get API key and paste it into `.env` file. If you need help, you can follow these steps:
@@ -146,7 +129,7 @@ Here is how you can run the project locally:
 - open project, in .env file paste the id into `MAILCHIMP_LIST_SUBSCRIBERS=paste id here` and we ready to go
 - visit `localhost:8000` or `velflix.test` test email for subscribing , and refresh your admin mailchimp it should be Your audience has increased 1 contact. 
 
-14. Setup Laravel Socialite login with Google account (optional)
+2. Setup Laravel Socialite login with Google account (optional)
  - Go to the [Google Developers Console](https://console.cloud.google.com/apis) get "GOOGLE_CLIENT_ID" and "GOOGLE_CLIENT_SECRET". paste it into `.env` file.
  if you need help, you can follow these steps:
  - Click Credentials menu, click "select a project" at the navbar > ALL > No organization > new project.
